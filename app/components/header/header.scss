@@ -1,0 +1,44 @@
+.header{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    &__inner{
+        position: relative;
+        padding: 51px 57px 51px 32px;
+        background-color: rgba(255,255,255, 0.7);
+    }
+
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+
+        &-left{
+            .header__menu-link:not(:last-child){
+                margin-right: 25px;
+            }
+        }
+        &-right{
+            .header__menu-link:not(:last-child){
+                margin-right: 45px;
+            }
+        }
+
+        &-link{
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: bold;
+            display: inline-block;
+        }
+    }
+
+    &__logo{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}

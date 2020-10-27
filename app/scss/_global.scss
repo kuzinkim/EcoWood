@@ -17,7 +17,7 @@ body {
     width: 100%;
     font-size: 16px;
     line-height: normal;
-    color: #fff;
+    color: #26130d;
     font-family: 'Montserrat', sans-serif;
     -webkit-overflow-scrolling: touch;
     -webkit-tap-highlight-color: transparent;
@@ -38,8 +38,6 @@ a {
 .wrapper {
     width: 100%;
     overflow: hidden;
-    position: relative;
-    z-index: 0;
 }
 img{
     display: block;
@@ -48,15 +46,15 @@ img{
 }
 
 .container {
-    width: 1140px;
+    width: 1200px;
     margin: 0 auto;
     max-width: 100%;
-    @include media-breakpoint-down(tablet) {
-        margin: 0 30px;
-        width: auto;
-    }
-    @include media-breakpoint-down(mobile) {
-        margin: 0 20px;
-    }
+    // @include media-breakpoint-down(tablet) {
+    //     margin: 0 30px;
+    //     width: auto;
+    // }
+    // @include media-breakpoint-down(mobile) {
+    //     margin: 0 20px;
+    // }
 }
 
