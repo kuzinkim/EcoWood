@@ -1,0 +1,39 @@
+.project{
+    padding-bottom: 126px;
+    &__inner{
+        display: flex;
+        height: 570px;
+        justify-content: space-between;
+        margin-top: 45px;
+    }
+
+    &__col{
+        width: calc(50% - 7px);
+
+        &:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .project__col-wrapper{
+                height: calc(50% - 7px);
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .project__item{
+                width: calc(50% - 7px);
+            }
+            
+        }
+    }
+
+    &__item{
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}

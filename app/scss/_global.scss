@@ -45,10 +45,36 @@ img{
     height: auto;
 }
 
+.svg-sprite {
+    display: none !important;
+    position: absolute;
+    left: -9999px;
+    right: -9999px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.section__title{
+    text-align: center;
+    padding-left: 20px;
+
+    &-icon{
+        display: inline-block;
+        position: absolute;
+        left: -45px;
+        top: 5px;
+        opacity: 0.35;
+    }
+}
+
 .container {
-    width: 1200px;
+    width: 1140px;
     margin: 0 auto;
     max-width: 100%;
+    &--fluid{
+        width: 1200px;
+        max-width: calc(100% - 40px);
+    }
     // @include media-breakpoint-down(tablet) {
     //     margin: 0 30px;
     //     width: auto;

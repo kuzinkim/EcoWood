@@ -1,0 +1,65 @@
+.leasing{
+    text-align: center;
+    padding-bottom: 130px;
+
+    &__text{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 32px;
+        display: block;
+        &:not(:last-child){
+            margin-bottom: 22px;
+        }
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 44px;
+        text-align: left;
+    }
+
+    &__col{
+        width: calc(50% - 20px);
+
+        &--text{
+            padding-left: 30px;
+        }
+    }
+
+    &__wrapper{
+        text-align: center;
+        margin-top: 80px;
+        display: inline-block;
+        position: relative;
+        &::after,
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            width: 100vw;
+            background-color: #e87e00;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        &::after{
+            left: 110%;
+        }
+        &::before{
+            right: 110%;
+        }
+    }
+    &__btn{
+        font-size: 24px;
+        font-weight: 800;
+        &-text{
+            display: inline-block;
+            margin-right: 42px;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e87e00;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.service{
+    margin-top: 90px;
+    text-align: center;
+    &__inner{
+        padding-bottom: 80px;
+        text-align: left;
+    }
+    &__row{
+        &-title{
+            text-align: center;
+            margin-bottom: 45px;
+            margin-top: 75px;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 0 160px;
+        }
+        &-wrap{
+            display: flex;
+        }
+        &:nth-child(even){
+            .service__item--pic{
+                order: -1
+            }
+            .service__item{
+                padding-right: 0;
+                padding-left: 40px;
+            }
+        }
+    }
+
+    &__item{
+        text-align: center;
+        padding-right: 50px;
+        &--pic{
+            width: 549px;
+            height: 302px;
+            flex-shrink: 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 10px;
+            padding-right: 0;
+        }
+        &-description{
+            display: block;
+            font-size: 16px;
+            line-height: 31px;
+            font-weight: 500;
+            text-align: left;
+            position: relative;
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100px;
+                background: linear-gradient(0deg,#fff,rgba(255,255,255,0));
+            }
+        }
+
+        &-btn{
+            margin-top: 30px;
+        }
+    }
+    &__btn{
+        position: relative;
+        &::after,
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            width: 100vw;
+            background-color: #e87e00;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        &::after{
+            left: 125%;
+        }
+        &::before{
+            right: 125%;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.button{
+    display: inline-block;
+    background: linear-gradient( 90deg, rgb(232,126,0) 0%, rgb(254,143,11) 100%);
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 600;
+    width: 208px;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+
+    &-more{
+        color: #e87e00;
+        font-size: 16px;
+        line-height: 29px;
+        font-weight: 600;
+        border: 1px solid #e87e00;
+        border-radius: 10px;
+        max-width: 100%;
+        display: inline-block;
+        text-align: center;
+        &--text{
+            width: 127px;
+            padding: 4px 0;
+        }
+        &--service{
+            width: 207px;
+            text-align: center;
+            padding: 19px 0;
+        }
+    }
+}

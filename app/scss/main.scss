@@ -2,6 +2,7 @@
 @import '_vars';
 @import '_func';
 @import '_normalize';
+@import '_sprite';
 
 /**
  * Main Styles
@@ -11,7 +12,8 @@
 /**
  * Elements
  */
-// @import '../elements/title/title'; 
+@import '../elements/button/button'; 
+@import '../elements/title/title'; 
 
 
 /**
@@ -20,6 +22,13 @@
 
 @import '../components/header/header';
 @import '../components/main/main';
+@import '../components/about/about';
+@import '../components/about/service';
+@import '../components/product/product';
+@import '../components/project/project';
+@import '../components/leasing/leasing';
+@import '../components/contact/contact';
+@import '../components/footer/footer';
 
 
 

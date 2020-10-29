@@ -1,0 +1,31 @@
+.contact#contact
+    .container
+        .section__title
+            h2.title Контакты
+                span.section__title-icon
+                    +svg('list')
+        .contact__inner
+            .contact__wrapper
+                .contact__item
+                    .contact__icon
+                       +svg('geo')
+                    span.contact__text 100000, Москва, ул. Электрозаводская, д.&nbsp;1&nbsp;оф.&nbsp;1
+                .contact__item-wrap
+                    .contact__item
+                        .contact__icon
+                            +svg('tel')
+                        a(href="tel:88001234567").contact__tel 8 (800) 123-45-67
+                    .contact__item
+                        .contact__icon
+                            +svg('tel')
+                        a(href="tel:+74951234567").contact__tel +7 (495) 123-45-67 
+                .contact__item
+                    .contact__icon
+                       +svg('mail')
+                    a(href="mailto:info@info.ru").contact__text info@info.ru
+            .contact__video(style="background-image: url(assets/images/video.jpg)")
+                .contact__video-icon
+                    img(src="assets/images/play.png", alt="")
+        .contact__bottom-wrapper
+            span.contact__btn-text Осталтсь вопросы?
+            a(href="").contact__btn.button Мы ответим

@@ -11,6 +11,7 @@ var rename       = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var del          = require('del');
 var pug          = require('gulp-pug');
+var svgSprite    = require('gulp-svg-sprite');
 
 gulp.task('html', function() {
 	browserSync.notify('Compiling HTML');
@@ -178,7 +179,7 @@ gulp.task('js-libs-build', function() {
 });
 
 gulp.task('assets', function() {
-	return gulp.src('app/assets/**/*.*')
+	return gulp.src(['app/assets/**/*.*', '!app/assets/svg/*.*'])
 			.pipe(plumber({
 					errorHandler: notify.onError(err => ({
 							title: 'assets',
@@ -187,6 +188,33 @@ gulp.task('assets', function() {
 			}))
 			.pipe(gulp.dest('dist/assets'))
 			.pipe(browserSync.reload({ stream: true }))
+});
+
+gulp.task('svg', function() {
+	return gulp.src(['app/svg/icons/*.svg'])
+		.pipe(plumber({
+			errorHandler: notify.onError(err => ({
+					title: 'SVG',
+					message: err.message
+			}))
+		}))
+		.pipe(svgSprite({
+			mode: {
+				symbol: {
+					sprite: "../../svg/sprite.svg",
+					prefix: '',
+					dimensions: '',
+					render: {
+						scss: {
+							dest:"../../scss/_sprite.scss",
+							template: "app/scss/_sprite_template.scss"
+						}
+					}
+				}
+			}
+		}))
+		.pipe(gulp.dest('app/svg'))
+		.pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('webserver', function() {
@@ -208,10 +236,11 @@ gulp.task('watch', function() {
 	gulp.watch('app/**/*.pug',  gulp.series('html'));
 	gulp.watch(['app/js/**/*.js', '!app/js/libs*.js', 'app/components/**/*.js', 'app/elements/**/*.js'],  gulp.series('js'));
 	gulp.watch('app/js/libs*.js',  gulp.series('js-libs'));
-	gulp.watch('app/assets/**/*.*', gulp.parallel('assets'));
+	gulp.watch(['app/assets/**/*.*', '!app/assets/svg/*.*'], gulp.parallel('assets'));
+	gulp.watch('app/svg/icons/*.*',  gulp.series('svg', 'html'));
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'html', 'css-build', 'css-libs-build', 'js-build', 'js-libs-build')));
+gulp.task('build', gulp.series('clean', 'svg', gulp.parallel('assets', 'html', 'css-build', 'css-libs-build', 'js-build', 'js-libs-build')));
 
-gulp.task('create', gulp.series('clean', gulp.parallel('assets', 'html', 'css', 'css-libs', 'js', 'js-libs')));
+gulp.task('create', gulp.series('clean', 'svg', gulp.parallel('assets', 'html', 'css', 'css-libs', 'js', 'js-libs')));
 gulp.task('default', gulp.series('create', gulp.parallel('webserver', 'watch')));
