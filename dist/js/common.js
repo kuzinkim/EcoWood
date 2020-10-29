@@ -1,0 +1,1 @@
+var debugTimes=!1;document.addEventListener("DOMContentLoaded",(function(e){const t=document.querySelectorAll("a.js-scroll-to");for(let e of t)e.addEventListener("click",(function(t){t.preventDefault();const o=e.getAttribute("href");document.querySelector(o).scrollIntoView({behavior:"smooth",block:"start"})}))}));
