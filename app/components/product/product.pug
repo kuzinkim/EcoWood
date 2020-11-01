@@ -27,7 +27,7 @@
                 .product__tab-item
                     span.product__tab-title EcoWood
                     span.product__tab-num 30
-                .product__tab-item
+                .product__tab-item.is-active
                     span.product__tab-title EcoWood
                     span.product__tab-num 50
                 .product__tab-item
@@ -87,6 +87,6 @@
                         span.characteristics__table-text Внешний габарит сушильной камеры:
                         span.characteristics__table-value 1 x 4 x 3=12
                 a(href="#").characteristics__btn.button-more.button-more--text Развернуть
-        a(href="").product__btn.button Узнать цену
+        button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
                             
 

@@ -25,7 +25,7 @@
                     a(href="mailto:info@info.ru").contact__text info@info.ru
             .contact__video(style="background-image: url(assets/images/video.jpg)")
                 .contact__video-icon
-                    img(src="assets/images/play.png", alt="")
+                    +svg('play')
         .contact__bottom-wrapper
             span.contact__btn-text Остались вопросы?
-            a(href="").contact__btn.button Мы ответим
+            button.contact__btn.button.js-popup-show(data-content=".js-popup-feedback") Мы ответим

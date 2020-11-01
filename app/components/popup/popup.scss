@@ -1,0 +1,118 @@
+.popup{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    overflow: auto;
+    padding: 20px 0;
+    align-items: center;
+    transition: all 0.4s ease;
+    display: flex;
+    &.open{
+        visibility: visible;
+        opacity: 1;
+        .popup__content{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__content{
+        width: 768px;
+        background-color: #fff;
+        position: relative;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    &-wrap{
+        margin: auto;
+    }
+
+    &__inner{
+        padding: 40px 70px 50px 70px;
+    }
+
+    &__close{
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+
+        &-line{
+            width: 2px;
+            height: 100%;
+            background-color: #979797;
+            display: block;
+            position: absolute;
+            right: 12px;
+
+            &--left{
+                transform: rotate(-45deg);
+            }
+            &--right{
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__title{
+        padding: 0 20px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__btn{
+        
+        &:disabled{
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+}
+
+.form{
+
+    &__button{
+        text-align: center;
+        margin-top: 49px;
+    }
+
+    &__label{
+        display: inline-block;
+        position: relative;
+        left: 20px;
+        background-color: #fff;
+        top: 10px;
+        padding: 0 10px;
+        font-weight: 600;
+        color: #598814;
+    }
+
+    &__input,
+    &__textarea{
+        display: block;
+        width: 100%;
+        border: 1px solid #b2c59e;
+        border-radius: 10px;
+        padding: 24px 30px;
+        font-weight: 500;
+
+        &::placeholder{
+            color: #ccc;
+            font-weight: 600;
+        }
+    }
+
+    &__field{
+        margin-bottom: 50px;
+    }
+}

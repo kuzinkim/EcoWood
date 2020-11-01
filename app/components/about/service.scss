@@ -1,5 +1,5 @@
 .service{
-    margin-top: 90px;
+    margin-top: 78px;
     text-align: center;
     &__inner{
         padding-bottom: 80px;
@@ -14,14 +14,11 @@
             font-weight: bold;
             padding: 0 160px;
         }
-        &-wrap{
-            display: flex;
-        }
         &:nth-child(even){
             .service__item--pic{
                 order: -1
             }
-            .service__item{
+            .service__item-wrap{
                 padding-right: 0;
                 padding-left: 40px;
             }
@@ -30,7 +27,19 @@
 
     &__item{
         text-align: center;
-        padding-right: 50px;
+        display: flex;
+
+        &-wrap{
+            padding-right: 50px;
+            &--hidden{
+                .service__item-description{
+                    max-height: 320px;
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
         &--pic{
             width: 549px;
             height: 302px;
@@ -48,6 +57,9 @@
             font-weight: 500;
             text-align: left;
             position: relative;
+            transition: all .5s ease;
+            overflow: hidden;
+            max-height: 1200px;
             &::after{
                 content: '';
                 display: block;
@@ -57,11 +69,14 @@
                 right: 0;
                 height: 100px;
                 background: linear-gradient(0deg,#fff,rgba(255,255,255,0));
+                opacity: 0;
+                transition: opacity .4s ease;
             }
         }
 
         &-btn{
             margin-top: 30px;
+            cursor: pointer;
         }
     }
     &__btn{
