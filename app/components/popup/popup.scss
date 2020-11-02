@@ -132,3 +132,41 @@
         margin-bottom: 28px;
     }
 }
+
+.button-up{
+    position: fixed;
+    right: 153px;
+    bottom: 100px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255, 0.95);
+    cursor: pointer;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+    transform: translateY(250%);
+    transition: transform .4s ease;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &__icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-44%, -50%) rotate(270deg);
+        display: block;
+
+        svg.arrow-up{
+            width: 39px;
+            height: 49px;
+        }
+    }
+    &.is-show{
+        transform: translateY(0);
+    }
+
+}

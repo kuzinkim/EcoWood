@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
         body.style.paddingRight = lockPaddingValue
         body.classList.add('is-hidden')
+        buttonUp.style.opacity = 0
 
         unlock = false
 
@@ -92,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             body.style.paddingRight = '0px'
             body.classList.remove('is-hidden')
+            buttonUp.style.opacity = 1
 
         }, timeOut)
 
@@ -174,6 +176,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
     };
 
+    var buttonUp = document.querySelector('.button-up')
+    
     window.addEventListener('scroll', function(e){
         var pageScrollTop = window.pageYOffset
         var header = document.querySelector('.header')
@@ -183,6 +187,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
             header.classList.add('is-fixed')
         }else{
             header.classList.remove('is-fixed')
+        }
+
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrolled > 700) {
+            buttonUp.classList.add('is-show');
+        } else {
+            buttonUp.classList.remove('is-show');
         }
     })
 
