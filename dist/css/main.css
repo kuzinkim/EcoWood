@@ -603,7 +603,8 @@ textarea {
       color: #fff; }
     .button-more--text {
       width: 127px;
-      padding: 4px 0; }
+      padding: 4px 0;
+      cursor: pointer; }
     .button-more--service {
       width: 207px;
       text-align: center;
@@ -626,6 +627,15 @@ textarea {
   left: 0;
   right: 0;
   z-index: 100; }
+  .header.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; }
+    .header.is-fixed .header__menu-link {
+      color: #e87e00; }
+    .header.is-fixed .header__inner {
+      background-color: rgba(255, 255, 255, 0.95); }
   .header__inner {
     position: relative;
     padding: 51px 57px 51px 32px;
@@ -797,9 +807,9 @@ textarea {
     display: flex; }
     .service__item-wrap {
       padding-right: 50px; }
-      .service__item-wrap--hidden .service__item-description {
+      .service__item-wrap.is-hidden .service__item-description {
         max-height: 320px; }
-        .service__item-wrap--hidden .service__item-description::after {
+        .service__item-wrap.is-hidden .service__item-description::after {
           opacity: 1; }
     .service__item--pic {
       width: 549px;
@@ -966,13 +976,24 @@ textarea {
       right: 125%; }
 
 .characteristics {
-  position: relative; }
+  position: relative;
+  display: none;
+  opacity: 0; }
+  .characteristics.is-hidden .characteristics__table {
+    max-height: 750px; }
+    .characteristics.is-hidden .characteristics__table::after {
+      opacity: 1; }
   .characteristics__table {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 25px;
-    position: relative; }
+    position: relative;
+    max-height: 1600px;
+    overflow: hidden;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
     .characteristics__table::after {
       content: '';
       display: block;
@@ -981,6 +1002,10 @@ textarea {
       left: 0;
       right: 0;
       height: 200px;
+      opacity: 0;
+      -webkit-transition: opacity .4s ease;
+      -o-transition: opacity .4s ease;
+      transition: opacity .4s ease;
       background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255, 255, 255, 0)));
       background: -o-linear-gradient(bottom, #fff, rgba(255, 255, 255, 0));
       background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0)); }
@@ -1006,6 +1031,25 @@ textarea {
       display: block;
       width: 50%;
       padding-left: 142px; }
+  .characteristics.is-active {
+    display: block;
+    visibility: visible;
+    -webkit-animation: fade 0.8s ease;
+            animation: fade 0.8s ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .project {
   padding: 65px 0 65px 0; }
@@ -1054,7 +1098,39 @@ textarea {
     background-position: center center;
     background-size: cover;
     border-radius: 10px;
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; }
+    .project__item:hover .project__item-wrap {
+      -webkit-transform: translateY(0) translateZ(0);
+              transform: translateY(0) translateZ(0); }
+    .project__item-wrap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.35);
+      text-align: center;
+      color: #fff;
+      border-radius: 10px;
+      padding: 38px 0px;
+      -webkit-transform: translateY(100%) translateZ(0);
+              transform: translateY(100%) translateZ(0);
+      -webkit-transition: -webkit-transform .4s ease;
+      transition: -webkit-transform .4s ease;
+      -o-transition: transform .4s ease;
+      transition: transform .4s ease;
+      transition: transform .4s ease, -webkit-transform .4s ease; }
+    .project__item-title {
+      font-size: 34px;
+      line-height: 36px;
+      font-weight: 600;
+      display: block; }
+    .project__item-adress {
+      font-size: 16px;
+      line-height: 36px;
+      font-weight: 600;
+      display: block; }
 
 .leasing {
   text-align: center;
@@ -1326,7 +1402,7 @@ textarea {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 990;
   opacity: 0;
   visibility: hidden;
   overflow: auto;
@@ -1391,6 +1467,16 @@ textarea {
   .popup__btn:disabled {
     opacity: 0.5;
     pointer-events: none; }
+  .popup__description {
+    display: block;
+    color: #598814;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center; }
+  .popup--success {
+    text-align: center; }
+    .popup--success .popup__btn {
+      margin-top: 45px; }
 
 .form__button {
   text-align: center;
@@ -1430,4 +1516,4 @@ textarea {
     font-weight: 600; }
 
 .form__field {
-  margin-bottom: 50px; }
+  margin-bottom: 28px; }

@@ -4,6 +4,19 @@
     left: 0;
     right: 0;
     z-index: 100;
+    &.is-fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        .header__menu-link{
+            color: #e87e00;
+        }
+
+        .header__inner{
+            background-color: rgba(255,255,255, 0.95);
+        }
+    }
 
     &__inner{
         position: relative;

@@ -21,72 +21,412 @@
                     li.product__list-item Стопоры у задней стенки для безопасности и удобства загрузки
                 .product__pic(style="background-image: url(assets/images/product.jpg)")
             .product__tab
-                .product__tab-item
+                .product__tab-item(data-id="10")
                     span.product__tab-title EcoWood
                     span.product__tab-num 10
-                .product__tab-item
+                .product__tab-item(data-id="30")
                     span.product__tab-title EcoWood
                     span.product__tab-num 30
-                .product__tab-item.is-active
+                .product__tab-item.is-active(data-id="50")
                     span.product__tab-title EcoWood
                     span.product__tab-num 50
-                .product__tab-item
+                .product__tab-item(data-id="60")
                     span.product__tab-title EcoWood
                     span.product__tab-num 60
-                .product__tab-item
+                .product__tab-item(data-id="70")
                     span.product__tab-title EcoWood
                     span.product__tab-num 70
-                .product__tab-item
+                .product__tab-item(data-id="90")
                     span.product__tab-title EcoWood
                     span.product__tab-num 90
-                .product__tab-item
+                .product__tab-item(data-id="100")
                     span.product__tab-title EcoWood
                     span.product__tab-num 100
-                .product__tab-item
+                .product__tab-item(data-id="120")
                     span.product__tab-title EcoWood
                     span.product__tab-num 120
-                .product__tab-item
+                .product__tab-item(data-id="150")
                     span.product__tab-title EcoWood
                     span.product__tab-num 150
-            .product__characteristics.characteristics
-                .characteristics__table
-                    .characteristics__table-row
-                        span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                        span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                    .characteristics__table-row
-                        span.characteristics__table-text Внешний габарит сушильной камеры:
-                        span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    .characteristics__table-row
-                        span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                        span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
-                    .characteristics__table-row
-                        span.characteristics__table-text Внешний габарит сушильной камеры:
-                        span.characteristics__table-value 1 x 4 x 3=12
-                    .characteristics__table-row
-                        span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                        span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                    .characteristics__table-row
-                        span.characteristics__table-text Внешний габарит сушильной камеры:
-                        span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    .characteristics__table-row
-                        span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                        span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
-                    .characteristics__table-row
-                        span.characteristics__table-text Внешний габарит сушильной камеры:
-                        span.characteristics__table-value 1 x 4 x 3=12
-                    .characteristics__table-row
-                        span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                        span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                    .characteristics__table-row
-                        span.characteristics__table-text Внешний габарит сушильной камеры:
-                        span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    .characteristics__table-row
-                        span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                        span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
-                    .characteristics__table-row
-                        span.characteristics__table-text Внешний габарит сушильной камеры:
-                        span.characteristics__table-value 1 x 4 x 3=12
-                a(href="#").characteristics__btn.button-more.button-more--text Развернуть
+            .product__characteristics-wrapper
+                .product__characteristics.characteristics.js-hidden-container(data-id="10")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 1 x 4 x 3=12
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 1 x 4 x 3=12
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 1 x 4 x 3=12
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 1 x 4 x 3=12
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 1 x 4 x 3=12
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                .product__characteristics.characteristics.is-active.js-hidden-container(data-id="50")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                .product__characteristics.characteristics.js-hidden-container(data-id="30")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                .product__characteristics.characteristics.js-hidden-container(data-id="60")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                .product__characteristics.characteristics.js-hidden-container(data-id="70")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                .product__characteristics.characteristics.js-hidden-container(data-id="90")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                .product__characteristics.characteristics.js-hidden-container(data-id="100")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                .product__characteristics.characteristics.js-hidden-container(data-id="120")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                .product__characteristics.characteristics.js-hidden-container(data-id="150")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
         button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
                             
 

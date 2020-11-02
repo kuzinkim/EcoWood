@@ -80,7 +80,7 @@ function jump(target, options) {
       easing: options.easing || easeInOutQuad
     },
     distance = typeof target === 'string' ?
-    opt.offset + document.querySelector(target).getBoundingClientRect().top :
+    opt.offset + document.querySelector(target).getBoundingClientRect().top - 126 :
     target,
     duration = typeof opt.duration === 'function' ?
     opt.duration(distance) :

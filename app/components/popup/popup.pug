@@ -4,19 +4,19 @@
             .popup__inner
                 .popup__title
                     h2.title Заявка на лизинг
-                form.popup__form.form(action="")
+                form.popup__form.form.js-form-leasing(action="#")
                     .form__field
                         label.form__label Ваше имя
-                        input.form__input(type="text", name="text" placeholder="Александр")
+                        input.form__input(type="text", name="name" placeholder="Александр" data-validate-field="name" autocomplete="off")
                     .form__field
                         label.form__label E-mail
-                        input.form__input(type="text", name="text" placeholder="E-mail") 
+                        input.form__input(type="email", name="email" placeholder="E-mail" data-validate-field="email" autocomplete="off") 
                     .form__field
                         label.form__label Ваш телефон
-                        input.form__input(type="text", name="text" placeholder="+7(___)___-__-__") 
+                        input.form__input(type="text", name="text" placeholder="+7(___)___-__-__" data-validate-field="myField" autocomplete="off" id="phone-mask-leasing") 
                     .form__button
-                        button.popup__btn.button(disabled value="Отправить") Отправить  
-            .popup__close.js-close.item1
+                        button.popup__btn.button(value="Отправить") Отправить  
+            .popup__close.js-close
                 span.popup__close-line.popup__close-line--left
                 span.popup__close-line.popup__close-line--right
 .popup.js-popup-price
@@ -24,19 +24,19 @@
         .popup__content
             .popup__inner
                 .popup__title
-                    h2.title Узнать цену на&nbsp;EcoWood 10
-                form.popup__form.form(action="")
+                    h2.title.js-popup-title Узнать цену на&nbsp;EcoWood <span class="js-popup-num">50</span>
+                form.popup__form.form.js-form-price(action="#")
                     .form__field
                         label.form__label Ваше имя
-                        input.form__input(type="text", name="text" placeholder="Александр")
+                        input.form__input(type="text", name="name" placeholder="Александр" data-validate-field="name" autocomplete="off")
                     .form__field
                         label.form__label E-mail
-                        input.form__input(type="text", name="text" placeholder="E-mail") 
+                        input.form__input(type="email", name="email" placeholder="E-mail" data-validate-field="email" autocomplete="off") 
                     .form__field
                         label.form__label Ваш телефон
-                        input.form__input(type="text", name="text" placeholder="+7(___)___-__-__") 
+                        input.form__input(type="text", name="text" placeholder="+7(___)___-__-__" data-validate-field="myField" autocomplete="off" id="phone-mask-price") 
                     .form__button
-                        button.popup__btn.button(disabled value="Отправить") Отправить   
+                        button.popup__btn.button(value="Отправить") Отправить   
             .popup__close.js-close.item2
                 span.popup__close-line.popup__close-line--left
                 span.popup__close-line.popup__close-line--right
@@ -46,21 +46,33 @@
             .popup__inner
                 .popup__title
                     h2.title Задайте ваш вопрос
-                form.popup__form.form(action="")
+                form.popup__form.form.js-form-feedback(action="#")
                     .form__field
                         label.form__label Ваше имя
-                        input.form__input(type="text", name="text" placeholder="Александр")
+                        input.form__input(type="text", name="name" placeholder="Александр" data-validate-field="name" autocomplete="off")
                     .form__field
                         label.form__label E-mail
-                        input.form__input(type="text", name="text" placeholder="E-mail") 
+                        input.form__input(type="email", name="email" placeholder="E-mail" data-validate-field="email" autocomplete="off")  
                     .form__field
                         label.form__label Ваш телефон
-                        input.form__input(type="text", name="text" placeholder="+7(___)___-__-__")
+                        input.form__input(type="text", name="text" placeholder="+7(___)___-__-__" data-validate-field="myField" autocomplete="off" id="phone-mask-feedback")
                     .form__field
                         label.form__label Сообщение
-                        textarea.form__textarea(name="text", cols="5", rows="5" placeholder="Ваше сообщение")
+                        textarea.form__textarea(name="text", cols="5", rows="5" placeholder="Ваше сообщение" data-validate-field="text" id="text")
                     .form__button
-                        button.popup__btn.button(disabled value="Отправить") Отправить   
-            .popup__close.js-close.item3
+                        button.popup__btn.button(value="Отправить") Отправить   
+            .popup__close.js-close
+                span.popup__close-line.popup__close-line--left
+                span.popup__close-line.popup__close-line--right
+.popup.popup--success.js-popup-success
+    .popup-wrap
+        .popup__content.js-popup-success
+            .popup__inner
+                .popup__title
+                    h2.title Спасибо,
+                span.popup__description Ваша заявка на лизинг принята!
+                span.popup__description Наши специалисты скоро свяжутся с Вами!
+                button.popup__btn.button Вернуться на сайт    
+            .popup__close.js-close
                 span.popup__close-line.popup__close-line--left
                 span.popup__close-line.popup__close-line--right

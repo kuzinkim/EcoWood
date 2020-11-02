@@ -31,7 +31,7 @@
 
         &-wrap{
             padding-right: 50px;
-            &--hidden{
+            &.is-hidden{
                 .service__item-description{
                     max-height: 320px;
                     &::after{

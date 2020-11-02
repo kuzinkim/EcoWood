@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // инициализация плагина плавной прокрутки по якорю
     initSmoothScrolling();
+    
+    tab();
 
     // функционал вызова и закрытия модального окна
     var popupLink = document.querySelectorAll('.js-popup-show'),
@@ -111,11 +113,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
-    var bindExpandBlock = function (block) {
-        block.classList.add('service__item-wrap--hidden');
-        var button = block.querySelector('.js-service-btn');
+    var bindExpandService = function (block) {
+        block.classList.add('is-hidden');
+        var button = block.querySelector('.js-more-btn');
         button.addEventListener('click', function () {
-            block.classList.toggle('service__item-wrap--hidden');
+            block.classList.toggle('is-hidden');
             if (button.innerText.toLowerCase() === 'развернуть') {
                 button.innerText = 'Свернуть';
             } else {
@@ -124,13 +126,67 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     }
 
-    var blocks = document.querySelectorAll('.service__item-wrap');
+    var blocksService = document.querySelectorAll('.js-hidden-container');
 
-    if (blocks.length) {
-        for (var i = 0; i < blocks.length; i += 1) {
-            bindExpandBlock(blocks[i]);
+    if (blocksService.length) {
+        for (var i = 0; i < blocksService.length; i += 1) {
+            bindExpandService(blocksService[i])
         }
     }
+
+    function tab() {
+        var tabNav = document.querySelectorAll('.product__tab-item'),
+            tabContent = document.querySelectorAll('.characteristics'),
+            popupPrice = document.querySelector('.js-popup-num'),
+            tabName;
+            
+            tabNav.forEach(function(item){
+                item.addEventListener('click', selectTabNav);
+            })
+
+            function selectTabNav() {
+
+                if(!this.classList.contains('is-active')){
+                    tabNav.forEach(function(item){
+                        item.classList.remove('is-active');
+                    })
+                }
+                
+                this.classList.add('is-active');
+
+                tabName = this.getAttribute('data-id');
+                selectTabContent(tabName);
+                popupPrice.innerHTML = tabName
+                
+            }
+
+            function selectTabContent(tabName) {
+                tabContent.forEach(function(item){
+                    var tabContentId = item.getAttribute('data-id');
+
+                    if(tabName == tabContentId){
+                        item.classList.add('is-active');
+                    }else{
+                        item.classList.remove('is-active');
+                    }
+                })
+                
+            }
+    };
+
+    window.addEventListener('scroll', function(e){
+        var pageScrollTop = window.pageYOffset
+        var header = document.querySelector('.header')
+        var headerHeight = header.clientHeight + 40
+
+        if(pageScrollTop >= headerHeight){
+            header.classList.add('is-fixed')
+        }else{
+            header.classList.remove('is-fixed')
+        }
+    })
+
+    @@include('../components/popup/form.js')
 
 });
 

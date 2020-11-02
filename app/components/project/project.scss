@@ -35,5 +35,41 @@
         background-size: cover;
         border-radius: 10px;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        &:hover{
+            .project__item-wrap{
+                transform: translateY(0) translateZ(0);
+            }
+        }
+
+        &-wrap{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.35);
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
+            padding: 38px 0px;
+            transform: translateY(100%) translateZ(0);
+            transition: transform .4s ease;
+        }
+
+        &-title{
+            font-size: 34px;
+            line-height: 36px;
+            font-weight: 600;
+            display: block;
+        }
+
+        &-adress{
+            font-size: 16px;
+            line-height: 36px;
+            font-weight: 600;
+            display: block;
+        }
+
     }
 }
