@@ -20,6 +20,11 @@
         justify-content: center;
         margin-bottom: 28px;
 
+        @include media-breakpoint-down(tablet) {
+            flex-wrap: wrap;
+            padding: 0 70px;
+        }
+
         &-item{
             display: inline-block;
             color: #655d5b;
@@ -29,12 +34,22 @@
             &:not(:last-child){
                 margin-right: 50px;
             }
+            @include media-breakpoint-down(tablet) {
+                &:nth-child(3){
+                    margin-right: 0;
+                }
+            }
         }
     }
     &__contact{
         display: flex;
         justify-content: center;
         margin-bottom: 28px;
+
+        @include media-breakpoint-down(tablet) {
+            flex-wrap: wrap;
+            padding-left: 66px;
+        }
 
         &-item{
             display: inline-block;

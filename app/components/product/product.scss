@@ -10,12 +10,20 @@
         display: flex;
         align-items: center;
         margin-top: 30px;
+
+        @include media-breakpoint-down(tablet) {
+            display: block;
+        }
     }
 
     &__list{
         list-style: none;
         padding-right: 41px;
         text-align: left;
+
+        @include media-breakpoint-down(tablet) {
+            padding-right: 0;
+        }
         &-item{
             font-size: 16px;
             font-weight: 500;
@@ -46,6 +54,11 @@
         background-size: cover;
         flex-shrink: 0;
         border-radius: 10px;
+
+        @include media-breakpoint-down(tablet) {
+            width: 100%;
+            margin-top: 29px;
+        }
     }
 
     &__tab{
@@ -54,6 +67,13 @@
         color: #fff;
         margin-top: 45px;
         margin-bottom: 55px;
+
+        @include media-breakpoint-down(tablet) {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 73px;
+            margin-bottom: 47px;
+        }
         
         &-item{
             width: 119px;
@@ -62,6 +82,16 @@
             padding: 10px 0;
             cursor: pointer;
             transition: background-color .3s ease-out;
+
+            @include media-breakpoint-down(tablet) {
+                width: 138px;
+                margin-bottom: 10px;
+                &:not(:nth-child(5)){
+                    margin-right: 10px;
+                }
+                
+            }
+
             &.is-active{
                 background-color: #a75f0a;
             }
@@ -154,11 +184,22 @@
             display: block;
             width: 50%;
             padding-right: 55px;
+
+            @include media-breakpoint-down(tablet) {
+                width: 67%;
+                padding-right: 0;
+            }
         }
         &-value{
             display: block;
             width: 50%;
             padding-left: 142px;
+
+            @include media-breakpoint-down(tablet) {
+                width: 33%;
+                padding-left: 60px;
+            }
+            
         }
     }
     &.is-active{

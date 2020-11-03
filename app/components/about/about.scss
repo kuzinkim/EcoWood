@@ -4,6 +4,10 @@
         column-count: 2;
         column-gap: 43px;
         margin-top: 35px;
+
+        @include media-breakpoint-down(tablet) {
+            column-count: 1;
+        }
     }
 
     &__description{
@@ -20,6 +24,12 @@
         border-radius: 10px;
         position: relative;
         margin-top: 50px;
+
+        @include media-breakpoint-down(tablet) {
+            margin-right: calc((100vw - 768px) / 2 * -1);
+            margin-left: calc((100vw - 768px) / 2 * -1);
+            width: auto;
+        }
 
         &-stat{
             position: absolute;

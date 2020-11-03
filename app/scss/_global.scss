@@ -56,7 +56,6 @@ img{
 
 .section__title{
     text-align: center;
-    padding-left: 20px;
 
     &-icon{
         display: inline-block;
@@ -79,10 +78,13 @@ textarea{
         width: 1200px;
         max-width: calc(100% - 40px);
     }
-    // @include media-breakpoint-down(tablet) {
-    //     margin: 0 30px;
-    //     width: auto;
-    // }
+    @include media-breakpoint-down(tablet) {
+        width: 730px;
+        max-width: calc(100% - 40px);
+        &--fluid{
+            width: 768px;
+        }
+    }
     // @include media-breakpoint-down(mobile) {
     //     margin: 0 20px;
     // }

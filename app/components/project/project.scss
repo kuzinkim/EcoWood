@@ -5,10 +5,21 @@
         height: 570px;
         justify-content: space-between;
         margin-top: 45px;
+
+        @include media-breakpoint-down(tablet) {
+            flex-wrap: wrap;
+            height: 1000px;
+        }
     }
 
     &__col{
         width: calc(50% - 7px);
+
+        @include media-breakpoint-down(tablet) {
+            height: 50%;
+            width: 100%;
+            margin-bottom: 14px;
+        }
 
         &:nth-child(2){
             display: flex;

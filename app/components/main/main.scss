@@ -5,6 +5,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @include media-breakpoint-down(tablet) {
+        padding: 86px 0 56px 0;
+    }
+
     &__inner{
         position: relative;
     }
@@ -16,16 +20,25 @@
         top: 0;
         bottom: 0;
         display: flex;
+
+        @include media-breakpoint-down(tablet) {
+            right: 0;
+        }
     }
 
     &__wrapper{
         padding: 43px 0 50px;
         background-color: #fff;
         width: 485px;
+        max-width: 100%;
         border-radius: 10px;
         text-align: center;
         position: relative;
         z-index: 1;
+
+        @include media-breakpoint-down(tablet) {
+            width: 406px;
+        }
     }
 
     &__title{
@@ -33,6 +46,11 @@
         line-height: 72px;
         color: #598814;
         font-weight: bold;
+
+        @include media-breakpoint-down(tablet) {
+            font-size: 50px;
+            line-height: 60px;
+        }
     }
 
     &__description{
@@ -42,5 +60,11 @@
         display: block;
         padding: 0 20px;
         margin: 23px 0 41px;
+
+        @include media-breakpoint-down(tablet) {
+            font-size: 20px;
+            line-height: 30px;
+            padding: 0 54px;
+        }
     }
 }

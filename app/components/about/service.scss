@@ -13,6 +13,10 @@
             font-size: 28px;
             font-weight: bold;
             padding: 0 160px;
+
+            @include media-breakpoint-down(tablet) {
+                padding: 0;
+            }
         }
         &:nth-child(even){
             .service__item--pic{
@@ -29,8 +33,17 @@
         text-align: center;
         display: flex;
 
+        @include media-breakpoint-down(tablet) {
+            flex-wrap: wrap;
+        }
+
         &-wrap{
             padding-right: 50px;
+
+            @include media-breakpoint-down(tablet) {
+                padding-right: 0;
+            }
+            
             &.is-hidden{
                 .service__item-description{
                     max-height: 320px;
@@ -49,6 +62,12 @@
             background-size: cover;
             border-radius: 10px;
             padding-right: 0;
+
+            @include media-breakpoint-down(tablet) {
+                width: 100%;
+                order: -1;
+                margin-bottom: 42px;
+            }
         }
         &-description{
             display: block;
