@@ -175,6 +175,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     }
 
+    // Воспроизведение видео
+    var playBtn = document.querySelector('.contact__video-icon')
+
+    playBtn.addEventListener('click', function(){
+
+        var videoElement = document.getElementsByTagName('video')[0]
+
+        if (videoElement.paused) {  // если видео остановлено, запускаем
+            videoElement.play();
+        } else {
+            videoElement.pause();
+        }
+    })
+
+    console.log(playBtn);
+
     @@include('../components/popup/popup.js')
     @@include('../components/popup/form.js')
 

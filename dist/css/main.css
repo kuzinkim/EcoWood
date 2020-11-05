@@ -2174,6 +2174,13 @@ textarea {
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease; }
+    .popup__content--video {
+      background-color: transparent;
+      width: 1200px;
+      max-width: 100%; }
+      .popup__content--video .popup__close {
+        top: 20px;
+        right: 20px; }
   .popup-wrap {
     margin: auto; }
   .popup__inner {

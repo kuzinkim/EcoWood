@@ -28,6 +28,8 @@ if (popupClose.length > 0) {
         popupCloseElement.addEventListener("click", function (e) {
             popupOnClose(this.closest('.popup'), true)
             e.preventDefault()
+            var videoElement = document.getElementsByTagName('video')[0]
+            videoElement.pause()
         })
     }
 }
@@ -48,6 +50,8 @@ function popupOpen(curentPopup) {
         curentPopup.addEventListener('click', function (e) {
             if (!e.target.closest('.popup__content')) {
                 popupOnClose(e.target.closest('.popup'), true)
+                var videoElement = document.getElementsByTagName('video')[0]
+                videoElement.pause()
             }
         })
     }

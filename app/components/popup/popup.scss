@@ -30,6 +30,17 @@
         opacity: 0;
         visibility: hidden;
         transition: all 0.4s ease;
+
+        &--video{
+            background-color: transparent;
+            width: 1200px;
+            max-width: 100%;
+
+            .popup__close{
+                top: 20px;
+                right: 20px;
+            }
+        }
     }
 
     &-wrap{
