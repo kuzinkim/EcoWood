@@ -1492,7 +1492,7 @@ textarea {
         max-height: 1700px; } }
     @media (max-width: 767px) {
       .characteristics__table {
-        max-height: 2800px; } }
+        max-height: 3100px; } }
     .characteristics__table::after {
       content: '';
       display: block;

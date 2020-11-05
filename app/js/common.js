@@ -48,7 +48,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 }
                 
                 this.classList.add('is-active');
-                this.focus({preventScroll:true});
+
+                if(screen.width < 768){  
+                    console.log(this.offsetTop);
+                    console.log(this.clientHeight);
+
+                    window.scrollBy({
+                        top: this.offsetTop
+                    })
+                }
 
                 tabName = this.getAttribute('data-id');
                 selectTabContent(tabName);
@@ -188,8 +196,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             videoElement.pause();
         }
     })
-
-    console.log(playBtn);
 
     @@include('../components/popup/popup.js')
     @@include('../components/popup/form.js')
