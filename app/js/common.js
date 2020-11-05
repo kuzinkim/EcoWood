@@ -49,12 +49,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 
                 this.classList.add('is-active');
 
-                if(screen.width < 768){  
-                    console.log(this.offsetTop);
-                    console.log(this.clientHeight);
+                if(screen.width < 768){
+                    var tabOffsetTop = this.getBoundingClientRect().top
 
                     window.scrollBy({
-                        top: this.offsetTop
+                        top: tabOffsetTop
                     })
                 }
 
