@@ -7,7 +7,10 @@
         .leasing__inner
             .leasing__col
                 .leasing__partners
-                    img(src="assets/images/partners.png", alt="")
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="assets/images/partners-mobile.png">
+                        <img src="assets/images/partners.png" alt="">
+                    </picture>
             .leasing__col.leasing__col--text
                 span.leasing__text Любое оборудование, представленное на сайте компании «EcoWood» возможно приобрести с помощью лизинга. 
                 span.leasing__text Мы сотрудничаем <b>с ведущими лизинговыми компаниями,</b> представленными на рынке России и с радостью поможем получить <b>лучшее предложение</b> на финансирование.

@@ -6,50 +6,223 @@
                     +svg('list')
         .product__inner
             .product__wrapper
-                ul.product__list
-                    li.product__list-item Несущий каркас из сплавов алюминия
-                    li.product__list-item Полностью алюминиевая обшивка (и внутри и снаружи)
-                    li.product__list-item Толщина стен – 165 мм (при толщине утеплителя – 150мм) 
-                    li.product__list-item Внутреннее оборудование ведущих европейских изготовителей: Belimo, Dunfos, Logica, Lafert
-                    li.product__list-item Теплообменники с тепловым запасом, максимум 6,5кВт на 1м 3 загрузки 
-                    li.product__list-item Равномерная продуваемость не менее 3-3,5 м/с
-                    li.product__list-item Система увлажнения  Danfoss (Дания)
-                    li.product__list-item Трёхходовой кран Belimo(Швейцария)
-                    li.product__list-item Удобные размеры для загрузки 6,6 метра
-                    li.product__list-item Контроллер LiTOUCH(Италия)с сенсорным цветным дисплеем
-                    li.product__list-item Верхние и боковые шторки для отсечения паразитных потоков воздуха
-                    li.product__list-item Стопоры у задней стенки для безопасности и удобства загрузки
+                .product__wrapper-list.js-hidden-container
+                    ul.product__list
+                        li.product__list-item Несущий каркас из сплавов алюминия
+                        li.product__list-item Полностью алюминиевая обшивка (и внутри и снаружи)
+                        li.product__list-item Толщина стен – 165 мм (при толщине утеплителя – 150мм) 
+                        li.product__list-item Внутреннее оборудование ведущих европейских изготовителей: Belimo, Dunfos, Logica, Lafert
+                        li.product__list-item Теплообменники с тепловым запасом, максимум 6,5кВт на 1м 3 загрузки 
+                        li.product__list-item Равномерная продуваемость не менее 3-3,5 м/с
+                        li.product__list-item Система увлажнения  Danfoss (Дания)
+                        li.product__list-item Трёхходовой кран Belimo(Швейцария)
+                        li.product__list-item Удобные размеры для загрузки 6,6 метра
+                        li.product__list-item Контроллер LiTOUCH(Италия)с сенсорным цветным дисплеем
+                        li.product__list-item Верхние и боковые шторки для отсечения паразитных потоков воздуха
+                        li.product__list-item Стопоры у задней стенки для безопасности и удобства загрузки
+                    span.product__list-btn.button-more.button-more--text.js-more-btn Развернуть
                 .product__pic(style="background-image: url(assets/images/product.jpg)")
-            .product__tab
+            .product__tab.js-parent
                 .product__tab-item(data-id="10")
-                    span.product__tab-title EcoWood
-                    span.product__tab-num 10
+                    .product__tab-btn
+                        span.product__tab-title EcoWood
+                        span.product__tab-num 10
+                        .product__tab-arrow
+                            +svg('arrow')
                 .product__tab-item(data-id="30")
-                    span.product__tab-title EcoWood
-                    span.product__tab-num 30
+                    .product__tab-btn
+                        span.product__tab-title EcoWood
+                        span.product__tab-num 30
+                        .product__tab-arrow
+                            +svg('arrow')
                 .product__tab-item.is-active(data-id="50")
-                    span.product__tab-title EcoWood
-                    span.product__tab-num 50
+                    .product__tab-btn
+                        span.product__tab-title EcoWood
+                        span.product__tab-num 50
+                        .product__tab-arrow
+                            +svg('arrow')
                 .product__tab-item(data-id="60")
-                    span.product__tab-title EcoWood
-                    span.product__tab-num 60
-                .product__tab-item(data-id="70")
-                    span.product__tab-title EcoWood
-                    span.product__tab-num 70
-                .product__tab-item(data-id="90")
-                    span.product__tab-title EcoWood
-                    span.product__tab-num 90
+                    .product__tab-btn
+                        span.product__tab-title EcoWood
+                        span.product__tab-num 60
+                        .product__tab-arrow
+                            +svg('arrow')
+                .product__tab-item(data-id="75")
+                    .product__tab-btn
+                        span.product__tab-title EcoWood
+                        span.product__tab-num 75
+                        .product__tab-arrow
+                            +svg('arrow')
+                .product__tab-item(data-id="80")
+                    .product__tab-btn
+                        span.product__tab-title EcoWood
+                        span.product__tab-num 80
+                        .product__tab-arrow
+                            +svg('arrow')
                 .product__tab-item(data-id="100")
-                    span.product__tab-title EcoWood
-                    span.product__tab-num 100
+                    .product__tab-btn
+                        span.product__tab-title EcoWood
+                        span.product__tab-num 100
+                        .product__tab-arrow
+                            +svg('arrow')
                 .product__tab-item(data-id="120")
-                    span.product__tab-title EcoWood
-                    span.product__tab-num 120
+                    .product__tab-btn
+                        span.product__tab-title EcoWood
+                        span.product__tab-num 120
+                        .product__tab-arrow
+                            +svg('arrow')
                 .product__tab-item(data-id="150")
-                    span.product__tab-title EcoWood
-                    span.product__tab-num 150
+                    .product__tab-btn
+                        span.product__tab-title EcoWood
+                        span.product__tab-num 150
+                        .product__tab-arrow
+                            +svg('arrow')
+                span.product__tab-more.button-more.button-more--element(data-text-btn="Другие модели") Другие модели
             .product__characteristics-wrapper
-                .product__characteristics.characteristics.js-hidden-container(data-id="10")
+                .product__characteristics.characteristics.js-hidden-container(id="10")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (ширина х глубина х высота):
+                            span.characteristics__table-value 2,4 х 6,5 х 2,8 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 2,8 х 6,8 х 3,0 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Размер штабеля:
+                            span.characteristics__table-value 6,0 (6,2) x 1,3 x 1,2 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество штабелей:
+                            span.characteristics__table-value 1 x 2 x 1=2
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 50 мм/25 мм:
+                            span.characteristics__table-value 12 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 40 мм/25 мм:
+                            span.characteristics__table-value 10 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Тип древесины:
+                            span.characteristics__table-value Все породы
+                        .characteristics__table-row
+                            span.characteristics__table-text Толщина стеновой панели:
+                            span.characteristics__table-value 100 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Тележки, рельсы
+                            span.characteristics__table-value Есть
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарная тепловая мощность биметаллических теплообменников:
+                            span.characteristics__table-value Максимальная: 70 000 кКал/ч (1 шт.) 
+                        .characteristics__table-row
+                            span.characteristics__table-text Теплоноситель:
+                            span.characteristics__table-value Горячая вода
+                        .characteristics__table-row
+                            span.characteristics__table-text Входная температура теплоносителя (горячая вода):
+                            span.characteristics__table-value 90<sup>0</sup>-95<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Максимальная рабочая температура в сушильной камере:
+                            span.characteristics__table-value 80<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Приводы воздушных заслонок:
+                            span.characteristics__table-value 2 шт. (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество вентиляторов:
+                            span.characteristics__table-value 3 шт. (380 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Мощность двигателя одного реверсивного вентилятора и диаметр крыльчатки:
+                            span.characteristics__table-value 1,5 кВт, 600 мм, 1500 об/мин
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарный воздушный поток:
+                            span.characteristics__table-value 45 000 м3/час
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество форсунок, производительность системы увлажнения, требуемое давление:
+                            span.characteristics__table-value 54 л/ч / 3 шт. (до 10 Бар)
+                        .characteristics__table-row
+                            span.characteristics__table-text Трехходовой кран с приводом:
+                            span.characteristics__table-value ДУ-40 (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления:
+                            span.characteristics__table-value Полностью автоматическая (Helios2)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество датчиков влажности древесины, влажности воздуха и температуры воздуха:
+                            span.characteristics__table-value 4 + 1 + 1 шт.
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрощит:
+                            span.characteristics__table-value 1 шт. (380-400 В, 50 Гц
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                .product__characteristics.characteristics.js-hidden-container(id="30")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,7 х 4,3 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 4,6 х 5,4 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Размер штабеля:
+                            span.characteristics__table-value 6,0 (6,2) x 1,0 x 1,2 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество штабелей:
+                            span.characteristics__table-value 1 x 3 x 3 = 9
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 50 мм/25 мм:
+                            span.characteristics__table-value 35 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 40 мм/25 мм:
+                            span.characteristics__table-value 30 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Тип древесины:
+                            span.characteristics__table-value Все породы
+                        .characteristics__table-row
+                            span.characteristics__table-text Толщина стеновой панели:
+                            span.characteristics__table-value 165 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Инспекционная дверь:
+                            span.characteristics__table-value Есть
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарная тепловая мощность биметаллических двухрядных теплообменников:
+                            span.characteristics__table-value Максимальная: 220 000 кКал/ч (2 шт.)
+                        .characteristics__table-row
+                            span.characteristics__table-text Теплоноситель:
+                            span.characteristics__table-value Горячая вода
+                        .characteristics__table-row
+                            span.characteristics__table-text Входная температура теплоносителя (горячая вода):
+                            span.characteristics__table-value 90<sup>0</sup> - 95<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Максимальная рабочая температура в сушильной камере:
+                            span.characteristics__table-value 80<sup>0</sup> C
+                        .characteristics__table-row
+                            span.characteristics__table-text Приточно-вытяжная вентиляция:
+                            span.characteristics__table-value 4 воздушных заслонок 500 х 300 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Приводы воздушных заслонок:
+                            span.characteristics__table-value 2 шт. (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество вентиляторов:
+                            span.characteristics__table-value 3 шт. (380 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Мощность двигателя одного реверсивного вентилятора и диаметр крыльчатки:
+                            span.characteristics__table-value 3,0 кВт, 800 мм, 1500 об/мин
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарный воздушный поток:
+                            span.characteristics__table-value 96 000 м<sup>3</sup>/час
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество форсунок, производительность системы увлажнения, требуемое давление:
+                            span.characteristics__table-value 54 л/ч / 3 шт. (до 10 Бар)
+                        .characteristics__table-row
+                            span.characteristics__table-text Трехходовой кран с приводом:
+                            span.characteristics__table-value ДУ-50 (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления:
+                            span.characteristics__table-value Полностью автоматическая (LiTOUCH)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество датчиков влажности древесины, влажности воздуха и температуры воздуха:
+                            span.characteristics__table-value 6 + 2 + 2 шт.
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрощит с дублирующим ручным управлением:
+                            span.characteristics__table-value 1 шт. (380-400 В, 50 Гц)
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                .product__characteristics.characteristics.is-active.js-hidden-container(id="50")
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
@@ -58,375 +231,526 @@
                             span.characteristics__table-text Внешний габарит сушильной камеры:
                             span.characteristics__table-value 7,0 х 6,3 х 5,5 м
                         .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-text Размер штабеля:
                             span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
                         .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 1 x 4 x 3=12
+                            span.characteristics__table-text Количество штабелей:
+                            span.characteristics__table-value 1 x 4 x 3 = 12
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 50 мм/25 мм:
+                            span.characteristics__table-value 55 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 40 мм/25 мм:
+                            span.characteristics__table-value 50 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Тип древесины:
+                            span.characteristics__table-value Все породы
+                        .characteristics__table-row
+                            span.characteristics__table-text Толщина стеновой панели:
+                            span.characteristics__table-value 165 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Инспекционная дверь:
+                            span.characteristics__table-value Есть
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарная тепловая мощность биметаллических двухрядных теплообменников:
+                            span.characteristics__table-value Максимальная: 300 000 кКал/ч (2 шт.) 
+                        .characteristics__table-row
+                            span.characteristics__table-text Теплоноситель:
+                            span.characteristics__table-value Горячая вода
+                        .characteristics__table-row
+                            span.characteristics__table-text Входная температура теплоносителя (горячая вода):
+                            span.characteristics__table-value 90<sup>0</sup> - 95<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Максимальная рабочая температура в сушильной камере:
+                            span.characteristics__table-value 80<sup>0</sup> C
+                        .characteristics__table-row
+                            span.characteristics__table-text Приточно-вытяжная вентиляция:
+                            span.characteristics__table-value 4 воздушных заслонок 450 х 450 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Приводы воздушных заслонок:
+                            span.characteristics__table-value 2 шт. (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество вентиляторов:
+                            span.characteristics__table-value 4 шт. (380 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Мощность двигателя одного реверсивного вентилятора и диаметр крыльчатки:
+                            span.characteristics__table-value 3,0 кВт, 800 мм, 1500 об/мин
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарный воздушный поток:
+                            span.characteristics__table-value 128 000 м<sup>3</sup>/час
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество форсунок, производительность системы увлажнения, требуемое давление:
+                            span.characteristics__table-value 72 л/ч / 4 шт. (до 10 Бар)
+                        .characteristics__table-row
+                            span.characteristics__table-text Трехходовой кран с приводом:
+                            span.characteristics__table-value ДУ-50 (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления:
+                            span.characteristics__table-value Полностью автоматическая (LiTOUCH)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество датчиков влажности древесины, влажности воздуха и температуры воздуха:
+                            span.characteristics__table-value 6 + 2 + 2 шт.
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрощит с дублирующим ручным управлением:
+                            span.characteristics__table-value 1 шт. (380-400 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Тележка для подъёма и сдвига ворот:
+                            span.characteristics__table-value Механическая, с редуктором
+                        .characteristics__table-row
+                            span.characteristics__table-text Горизонтальны и вертикальные шторки
+                            span.characteristics__table-value Есть
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                .product__characteristics.characteristics.js-hidden-container(id="60")
+                    .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                            span.characteristics__table-value 6,7 х 7,1 х 4,1 м
                         .characteristics__table-row
                             span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                            span.characteristics__table-value 7,0 х 7,5 х 5,5 м
                         .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-text Размер штабеля:
                             span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
                         .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 1 x 4 x 3=12
+                            span.characteristics__table-text Количество штабелей:
+                            span.characteristics__table-value 1 x 4 x 4 = 16
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 50 мм/25 мм:
+                            span.characteristics__table-value 65 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 40 мм/25 мм:
+                            span.characteristics__table-value 60 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Тип древесины:
+                            span.characteristics__table-value Все породы
+                        .characteristics__table-row
+                            span.characteristics__table-text Толщина стеновой панели:
+                            span.characteristics__table-value 165 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Инспекционная дверь:
+                            span.characteristics__table-value Есть
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарная тепловая мощность биметаллических двухрядных теплообменников:
+                            span.characteristics__table-value Максимальная: 330 000 кКал/ч (2 шт.)
+                        .characteristics__table-row
+                            span.characteristics__table-text Теплоноситель:
+                            span.characteristics__table-value Горячая вода
+                        .characteristics__table-row
+                            span.characteristics__table-text Входная температура теплоносителя (горячая вода):
+                            span.characteristics__table-value 90<sup>0</sup> - 95<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Максимальная рабочая температура в сушильной камере:
+                            span.characteristics__table-value 80<sup>0</sup> C
+                        .characteristics__table-row
+                            span.characteristics__table-text Приточно-вытяжная вентиляция:
+                            span.characteristics__table-value 4 воздушных заслонок 500 х 300 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Приводы воздушных заслонок:
+                            span.characteristics__table-value 2 шт. (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество вентиляторов:
+                            span.characteristics__table-value 4 шт. (380 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Мощность двигателя одного реверсивного вентилятора и диаметр крыльчатки:
+                            span.characteristics__table-value 4,0 кВт, 800 мм, 1500 об/мин
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарный воздушный поток:
+                            span.characteristics__table-value 140 000 м<sup>3</sup>/час
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество форсунок, производительность системы увлажнения, требуемое давление:
+                            span.characteristics__table-value 72 л/ч / 4 шт. (до 10 Бар)
+                        .characteristics__table-row
+                            span.characteristics__table-text Трехходовой кран с приводом:
+                            span.characteristics__table-value ДУ-50 (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления:
+                            span.characteristics__table-value Полностью автоматическая (LiTOUCH)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество датчиков влажности древесины, влажности воздуха и температуры воздуха:
+                            span.characteristics__table-value 6 + 2 + 2 шт.
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрощит с дублирующим ручным управлением:
+                            span.characteristics__table-value 1 шт. (380-400 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Тележка для подъёма и сдвига ворот:
+                            span.characteristics__table-value Механическая, с редуктором
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                .product__characteristics.characteristics.js-hidden-container(id="75")
+                    .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                            span.characteristics__table-value 6,6 х 8,4 х 4,1 м
                         .characteristics__table-row
                             span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                            span.characteristics__table-value 7,0 х 8,8 х 5,5 м
                         .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-text Размер штабеля:
                             span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
                         .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 1 x 4 x 3=12
+                            span.characteristics__table-text Количество штабелей:
+                            span.characteristics__table-value 1 x 5 x 3 = 15
                         .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 1 x 4 x 3=12
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 50 мм/25 мм:
+                            span.characteristics__table-value 80 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 40 мм/25 мм:
+                            span.characteristics__table-value 75 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Тип древесины:
+                            span.characteristics__table-value Все породы
+                        .characteristics__table-row
+                            span.characteristics__table-text Толщина стеновой панели:
+                            span.characteristics__table-value 165 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Инспекционная дверь:
+                            span.characteristics__table-value Есть
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарная тепловая мощность биметаллических двухрядных теплообменников:
+                            span.characteristics__table-value Максимальная: 400 000 кКал/ч (2 шт.)
+                        .characteristics__table-row
+                            span.characteristics__table-text Теплоноситель:
+                            span.characteristics__table-value Горячая вода
+                        .characteristics__table-row
+                            span.characteristics__table-text Входная температура теплоносителя (горячая вода):
+                            span.characteristics__table-value 90<sup>0</sup> - 95<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Максимальная рабочая температура в сушильной камере:
+                            span.characteristics__table-value 80<sup>0</sup> C
+                        .characteristics__table-row
+                            span.characteristics__table-text Приточно-вытяжная вентиляция:
+                            span.characteristics__table-value 6 воздушных заслонок 450 х 450 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Приводы воздушных заслонок:
+                            span.characteristics__table-value 4 шт. (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество вентиляторов:
+                            span.characteristics__table-value 5 шт. (380 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Мощность двигателя одного реверсивного вентилятора и диаметр крыльчатки:
+                            span.characteristics__table-value 4,0 кВт, 800 мм, 1500 об/мин
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарный воздушный поток:
+                            span.characteristics__table-value 175 000 м<sup>3</sup>/час
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество форсунок, производительность системы увлажнения, требуемое давление:
+                            span.characteristics__table-value 108 л/ч / 6 шт. (до 10 Бар)
+                        .characteristics__table-row
+                            span.characteristics__table-text Трехходовой кран с приводом:
+                            span.characteristics__table-value ДУ-65 СЕДЕЛЬНЫЙ (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления:
+                            span.characteristics__table-value Полностью автоматическая (LiTOUCH)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество датчиков влажности древесины, влажности воздуха и температуры воздуха:
+                            span.characteristics__table-value 6 + 2 + 2 шт.
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрощит с дублирующим ручным управлением:
+                            span.characteristics__table-value 1 шт. (380-400 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Тележка для подъёма и сдвига ворот:
+                            span.characteristics__table-value Механическая, с редуктором
+                        .characteristics__table-row
+                            span.characteristics__table-text Горизонтальны и вертикальные шторки
+                            span.characteristics__table-value Есть
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                .product__characteristics.characteristics.js-hidden-container(id="80")
+                    .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                            span.characteristics__table-value 6,6 х 8,4 х 4,1/5,5 м 
                         .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                            span.characteristics__table-text Размер штабеля:
+                            span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,2 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество штабелей:
+                            span.characteristics__table-value 1 x 5 x 3 = 15
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 50 мм/25 мм:
+                            span.characteristics__table-value 85 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 40 мм/25 мм:
+                            span.characteristics__table-value 80 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Тип древесины:
+                            span.characteristics__table-value Все породы
+                        .characteristics__table-row
+                            span.characteristics__table-text Толщина стеновой панели:
+                            span.characteristics__table-value 165 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Инспекционная дверь:
+                            span.characteristics__table-value Есть
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарная тепловая мощность биметаллических двухрядных теплообменников:
+                            span.characteristics__table-value Максимальная: 350 000 кКал/ч (2 шт.)
+                        .characteristics__table-row
+                            span.characteristics__table-text Теплоноситель:
+                            span.characteristics__table-value Горячая вода
+                        .characteristics__table-row
+                            span.characteristics__table-text Входная температура теплоносителя (горячая вода):
+                            span.characteristics__table-value 90<sup>0</sup> - 95<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Максимальная рабочая температура в сушильной камере:
+                            span.characteristics__table-value 80<sup>0</sup> C
+                        .characteristics__table-row
+                            span.characteristics__table-text Приводы воздушных заслонок:
+                            span.characteristics__table-value 2 шт. (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество вентиляторов:
+                            span.characteristics__table-value 5 шт. (380 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Мощность двигателя одного реверсивного вентилятора и диаметр крыльчатки:
+                            span.characteristics__table-value 4,0 кВт, 800 мм, 1500 об/мин 34000 м<sup>3</sup>час
+                        .characteristics__table-row
+                            span.characteristics__table-text Трехходовой кран с приводом:
+                            span.characteristics__table-value 1 комплект
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления:
+                            span.characteristics__table-value Полностью автоматическая (LiTOUCH)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество датчиков влажности древесины, влажности воздуха и температуры воздуха:
+                            span.characteristics__table-value 6 + 2 + 2 шт.
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрощит с дублирующим ручным управлением:
+                            span.characteristics__table-value 1 шт. (380-400 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Тележка для подъёма и сдвига ворот:
+                            span.characteristics__table-value Механическая, с редуктором
+                        .characteristics__table-row
+                            span.characteristics__table-text Вертикальные шторки
+                            span.characteristics__table-value 1 комплект
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления односторонняя с электромагнитным клапаном и 5-ю форсунками.
+                            span.characteristics__table-value 1 комплект
+                        .characteristics__table-row
+                            span.characteristics__table-text Клапана с приводами для сброса, перенасыщенного влагой воздуха
+                            span.characteristics__table-value 6 шт.
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрические кабеля термовлагостойкие
+                            span.characteristics__table-value 1 комплект
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                .product__characteristics.characteristics.js-hidden-container(id="100")
+                    .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 10,1 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 6,9 х 10,5 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Размер штабеля:
+                            span.characteristics__table-value 6,9 х 10,5 х 5,5 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество штабелей:
+                            span.characteristics__table-value 1 x 6 x 3 = 18
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 50 мм/25 мм:
+                            span.characteristics__table-value 100 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 40 мм/25 мм:
+                            span.characteristics__table-value 95 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Тип древесины:
+                            span.characteristics__table-value Все породы
+                        .characteristics__table-row
+                            span.characteristics__table-text Толщина стеновой панели:
+                            span.characteristics__table-value 165 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Инспекционная дверь:
+                            span.characteristics__table-value Есть
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарная тепловая мощность биметаллических двухрядных теплообменников:
+                            span.characteristics__table-value Максимальная: 480 000 кКал/ч (2 шт.)
+                        .characteristics__table-row
+                            span.characteristics__table-text Материал теплообменников
+                            span.characteristics__table-value Сталь - алюминий
+                        .characteristics__table-row
+                            span.characteristics__table-text Теплоноситель:
+                            span.characteristics__table-value Горячая вода
+                        .characteristics__table-row
+                            span.characteristics__table-text Входная температура теплоносителя (горячая вода):
+                            span.characteristics__table-value 90<sup>0</sup> - 95<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Максимальная рабочая температура в сушильной камере:
+                            span.characteristics__table-value 80<sup>0</sup> C
+                        .characteristics__table-row
+                            span.characteristics__table-text Приточно-вытяжная вентиляция:
+                            span.characteristics__table-value 8 воздушных заслонок 500 х 300 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Приводы воздушных заслонок:
+                            span.characteristics__table-value 4 шт. (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество вентиляторов:
+                            span.characteristics__table-value 5 шт. (380 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Мощность двигателя одного реверсивного вентилятора и диаметр крыльчатки:
+                            span.characteristics__table-value 5,5 кВт, 900 мм, 1500 об/мин
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарный воздушный поток:
+                            span.characteristics__table-value 220 000 м<sup>3</sup>/час
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество форсунок, производительность системы увлажнения, требуемое давление:
+                            span.characteristics__table-value 108 л/ч / 6 шт. (до 10 Бар)
+                        .characteristics__table-row
+                            span.characteristics__table-text Трехходовой кран с приводом:
+                            span.characteristics__table-value ДУ-65 (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления:
+                            span.characteristics__table-value Полностью автоматическая (LiTOUCH)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество датчиков влажности древесины, влажности воздуха и температуры воздуха:
+                            span.characteristics__table-value 6 + 2 + 2 шт.
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрощит с дублирующим ручным управлением:
+                            span.characteristics__table-value 1 шт. (380-400 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Тележка для подъёма и сдвига ворот:
+                            span.characteristics__table-value Механическая, с редуктором
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                .product__characteristics.characteristics.js-hidden-container(id="120")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 6,6 х 9,7 х 5,0м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 7,0 х 10,1 х 7,0м
+                        .characteristics__table-row
+                            span.characteristics__table-text Размер штабеля:
+                            span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,2 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 50 мм/25 мм:
+                            span.characteristics__table-value 130 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 40 мм/25 мм:
+                            span.characteristics__table-value 120 м<sup>3</sup>
+                        .characteristics__table-row
+                            span.characteristics__table-text Тип древесины:
+                            span.characteristics__table-value Все породы
+                        .characteristics__table-row
+                            span.characteristics__table-text Толщина стеновой панели:
+                            span.characteristics__table-value 165 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Инспекционная дверь:
+                            span.characteristics__table-value Есть
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарная тепловая мощность биметаллических двухрядных теплообменников:
+                            span.characteristics__table-value Макс: 510000 кКал/ч - 545 кВт Средняя: 310кВт
+                        .characteristics__table-row
+                            span.characteristics__table-text Материал теплообменников:
+                            span.characteristics__table-value Сталь - алюминий
+                        .characteristics__table-row
+                            span.characteristics__table-text Теплоноситель:
+                            span.characteristics__table-value Горячая вода
+                        .characteristics__table-row
+                            span.characteristics__table-text Входная температура теплоносителя (горячая вода):
+                            span.characteristics__table-value 90<sup>0</sup> - 95<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Максимальная рабочая температура в сушильной камере:
+                            span.characteristics__table-value 80<sup>0</sup> C
+                        .characteristics__table-row
+                            span.characteristics__table-text Приточно-вытяжная вентиляция:
+                            span.characteristics__table-value 8 воздушных заслонок 500 х 300 мм.
+                        .characteristics__table-row
+                            span.characteristics__table-text Приводы воздушных заслонок:
+                            span.characteristics__table-value 4 шт. (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество вентиляторов:
+                            span.characteristics__table-value 5 шт. (380 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Мощность двигателя одного реверсивного вентилятора и диаметр крыльчатки:
+                            span.characteristics__table-value 5,5 кВт, 900 мм, 1500 об/мин
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарный воздушный поток:
+                            span.characteristics__table-value 270 000 м<sup>3</sup>/час
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество форсунок, производительность системы увлажнения, требуемое давление:
+                            span.characteristics__table-value 10 + 10
+                        .characteristics__table-row
+                            span.characteristics__table-text Трехходовой кран с приводом:
+                            span.characteristics__table-value ДУ-65 (220 В)
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления:
+                            span.characteristics__table-value Полностью автоматическая (LiTOUCH)
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрощит с дублирующим ручным управлением:
+                            span.characteristics__table-value 1 шт. (380-400 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Тележка для подъёма и сдвига ворот:
+                            span.characteristics__table-value Механическая, с редуктором
+                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                .product__characteristics.characteristics.js-hidden-container(id="150")
+                    .characteristics__table
+                        .characteristics__table-row
+                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
+                            span.characteristics__table-value 13,0 х 8,4 х 4,1 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Внешний габарит сушильной камеры:
+                            span.characteristics__table-value 13,4 х 8,8 х 5,9 м
+                        .characteristics__table-row
+                            span.characteristics__table-text Размер штабеля:
                             span.characteristics__table-value 6,0 (6,2) x 1,2 x 1,0 м
                         .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 1 x 4 x 3=12
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 50 мм/25 мм:
+                            span.characteristics__table-value 160 м<sup>3</sup>
                         .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                            span.characteristics__table-text Полезный объем загрузки при толщине доски/прокладки 40 мм/25 мм:
+                            span.characteristics__table-value 150 м<sup>3</sup>
                         .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                            span.characteristics__table-text Тип древесины:
+                            span.characteristics__table-value Все породы
                         .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                            span.characteristics__table-text Толщина стеновой панели:
+                            span.characteristics__table-value 165 мм.
                         .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                            span.characteristics__table-text Инспекционная дверь:
+                            span.characteristics__table-value Есть
                         .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
+                            span.characteristics__table-text Суммарная тепловая мощность биметаллических двухрядных теплообменников:
+                            span.characteristics__table-value Максимальная: 750 000 кКал (870 кВт). Средняя: 450 кВт
                         .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
+                            span.characteristics__table-text Теплоноситель:
+                            span.characteristics__table-value Горячая вода
+                        .characteristics__table-row
+                            span.characteristics__table-text Входная температура теплоносителя (горячая вода):
+                            span.characteristics__table-value 90<sup>0</sup> - 95<sup>0</sup> С
+                        .characteristics__table-row
+                            span.characteristics__table-text Максимальная рабочая температура в сушильной камере:
+                            span.characteristics__table-value 80<sup>0</sup> C
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество вентиляторов:
+                            span.characteristics__table-value 10 шт. (380 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Мощность двигателя одного реверсивного вентилятора и диаметр крыльчатки:
+                            span.characteristics__table-value 4,0 кВт, 800 мм, 1500 об/мин
+                        .characteristics__table-row
+                            span.characteristics__table-text Суммарный воздушный поток:
+                            span.characteristics__table-value 340 000 м<sup>3</sup>/час
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество форсунок, производительность системы увлажнения, требуемое давление:
+                            span.characteristics__table-value 10 + 10
+                        .characteristics__table-row
+                            span.characteristics__table-text Трехходовой кран с приводом:
+                            span.characteristics__table-value Belimo ДУ-80 
+                        .characteristics__table-row
+                            span.characteristics__table-text Система управления:
+                            span.characteristics__table-value Полностью автоматическая (LiTOUCH)
+                        .characteristics__table-row
+                            span.characteristics__table-text Количество датчиков влажности древесины, влажности воздуха и температуры воздуха:
+                            span.characteristics__table-value 12 + 2 + 2 шт.
+                        .characteristics__table-row
+                            span.characteristics__table-text Электрощит с дублирующим ручным управлением:
+                            span.characteristics__table-value 1 шт. (380-400 В, 50 Гц)
+                        .characteristics__table-row
+                            span.characteristics__table-text Тележка для подъёма и сдвига ворот:
+                            span.characteristics__table-value Механическая, с редуктором
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                .product__characteristics.characteristics.is-active.js-hidden-container(data-id="50")
-                    .characteristics__table
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                .product__characteristics.characteristics.js-hidden-container(data-id="30")
-                    .characteristics__table
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                .product__characteristics.characteristics.js-hidden-container(data-id="60")
-                    .characteristics__table
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                .product__characteristics.characteristics.js-hidden-container(data-id="70")
-                    .characteristics__table
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                .product__characteristics.characteristics.js-hidden-container(data-id="90")
-                    .characteristics__table
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                .product__characteristics.characteristics.js-hidden-container(data-id="100")
-                    .characteristics__table
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                .product__characteristics.characteristics.js-hidden-container(data-id="120")
-                    .characteristics__table
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                .product__characteristics.characteristics.js-hidden-container(data-id="150")
-                    .characteristics__table
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,6 х 6,1 х 4,1 м
-                        .characteristics__table-row
-                            span.characteristics__table-text Внешний габарит сушильной камеры:
-                            span.characteristics__table-value 7,0 х 6,3 х 5,5 м
-                    span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
         button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
                             
 

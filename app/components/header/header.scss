@@ -15,8 +15,26 @@
         left: 0;
         right: 0;
         background-color: rgba(255,255,255, 0.95);
+
         .header__menu-link{
             color: #e87e00;
+            transition: color .2s ease;
+
+            &:hover{
+                color: #26130d;
+            }
+
+            @include media-breakpoint-down(tablet) {
+                color: #26130d;
+            }
+        }
+
+        .header__inner{
+            background-color: transparent;
+            
+            &.is-color{
+                background-color: rgba(255,255,255, 1);
+            }
         }
     }
 
@@ -24,10 +42,14 @@
         position: relative;
         padding: 51px 57px 51px 32px;
         background-color: rgba(255,255,255, 0.7);
+        transition: background-color .2s ease;
+
+        &.is-color{
+            background-color: #fff;
+        }
 
         @include media-breakpoint-down(tablet) {
-            padding: 0 57px 0 32px;
-            background-color: none;
+            padding: 0
         }
     }
 
@@ -46,23 +68,51 @@
             padding: 25px 0;
             opacity: 0;
             visibility: hidden;
+            transition: all .2s ease;
+
+            &.is-active{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @include media-breakpoint-down(mobile) {
+            text-align: left;
+            padding-left: 20px;
         }
 
         &-left{
-            .header__menu-link:not(:last-child){
+            .header__menu-item:not(:last-child){
                 margin-right: 25px;
                 @include media-breakpoint-down(tablet) {
                     margin-right: 47px;
                     margin-bottom: 26px;
                 }
+
+                @include media-breakpoint-down(mobile) {
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
             }
         }
         &-right{
-            .header__menu-link:not(:last-child){
+            .header__menu-item:not(:last-child){
                 margin-right: 45px;
                 @include media-breakpoint-down(tablet) {
                     margin-right: 47px;
                 }
+                @include media-breakpoint-down(mobile) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &-item{
+            display: inline-block;
+
+            @include media-breakpoint-down(mobile) {
+                display: block;
+                margin-bottom: 30px;
             }
         }
 
@@ -71,6 +121,16 @@
             line-height: 24px;
             font-weight: bold;
             display: inline-block;
+            transition: color .2s ease;
+
+            @include media-breakpoint-down(mobile) {
+                display: inline-block;
+            }
+
+            &:hover{
+                color: #e87e00;
+            }
+
         }
     }
 
@@ -98,4 +158,55 @@
         }
     }
 
+}
+
+.burg {
+    display: none;
+    width: 18px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    position: absolute;
+    right: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .3s ease 0s;
+    &__line,
+    &__line:nth-child(3){
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: 4px;
+        background-color: #26130d;
+        transition: transform .3s,opacity .2s;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    &__line{
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    &.active{
+        .burg__line:first-child{
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        .burg__line:nth-child(2) {
+            transform: translateY(3px) rotate(45deg);
+            background-color: #bbbbbb;
+        }
+        .burg__line:nth-child(3){
+            transform: translateY(-3px) rotate(-45deg);
+            background-color: #bbbbbb;
+        }
+        .burg__line:nth-child(4) {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+    @include media-breakpoint-down(tablet) {
+        display: block;
+    }
 }

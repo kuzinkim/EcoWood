@@ -2,6 +2,10 @@
     text-align: center;
     padding-bottom: 154px;
 
+    @include media-breakpoint-down(mobile) {
+        padding-bottom: 54px;
+    }
+
     &__logo{
         display: inline-block;
         position: relative;
@@ -25,6 +29,12 @@
             padding: 0 70px;
         }
 
+        @include media-breakpoint-down(mobile) {
+            width: 215px;
+            margin: 0 auto 28px;
+            padding: 0;
+        }
+
         &-item{
             display: inline-block;
             color: #655d5b;
@@ -39,6 +49,15 @@
                     margin-right: 0;
                 }
             }
+
+            @include media-breakpoint-down(mobile) {
+                &:not(:last-child){
+                    margin-right: 0px;
+                }
+                &:last-child{
+                    margin-left: 44px;
+                }
+            }
         }
     }
     &__contact{
@@ -48,7 +67,11 @@
 
         @include media-breakpoint-down(tablet) {
             flex-wrap: wrap;
-            padding-left: 66px;
+        }
+
+        @include media-breakpoint-down(mobile) {
+            width: 291px;
+            margin: 0 auto 28px;
         }
 
         &-item{
@@ -57,12 +80,30 @@
             font-size: 18px;
             line-height: 30px;
             font-weight: 500;
+            @include media-breakpoint-down(tablet) {
+                margin-bottom: 10px;
+            }
         }
         &-wrapper{
             margin: 0 50px;
+
+            @include media-breakpoint-down(tablet) {
+                margin: 0 50px 0 0;
+            }
+
+            @include media-breakpoint-down(mobile) {
+                margin: 0;
+            }
+
             .footer__contact-item:not(:last-child){
                 margin-right: 20px;
+
+                @include media-breakpoint-down(mobile) {
+                    margin: 0;
+                }
             }
+
+            
         }
     }
     &__text{
