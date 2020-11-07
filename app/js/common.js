@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // Табы
     function tab() {
-        var tabNav = document.querySelectorAll('.product__tab-item'),
+        var tabNav = document.querySelectorAll('.product__tab-btn'),
             tabContent = document.querySelectorAll('.characteristics'),
             popupPrice = document.querySelector('.js-popup-num'),
             tabName;
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 this.classList.add('is-active');
 
                 if(screen.width < 768){
-                    var tabOffsetTop = this.getBoundingClientRect().top
+                    var tabOffsetTop = this.getBoundingClientRect().top - 60
 
                     window.scrollBy({
                         top: tabOffsetTop
@@ -175,7 +175,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         productTab.forEach(function(item){
 
             var tabItem = item
-            var tabItemId = tabItem.getAttribute('data-id')
+            var tabBtnId = tabItem.querySelector('.product__tab-btn')
+            var tabItemId = tabBtnId.getAttribute('data-id')
             var tableItem = document.getElementById(tabItemId)
 
             tabItem.append(tableItem)

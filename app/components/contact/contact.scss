@@ -71,6 +71,12 @@
         font-weight: 500;
         text-decoration: underline;
         display: inline;
+        transition: color .2s ease;
+        cursor: pointer;
+
+        &:hover{
+            color: #e87e00;
+        }
     }
 
     &__tel{
@@ -78,6 +84,11 @@
         line-height: 32px;
         font-weight: 500;
         text-decoration: underline;
+        transition: color .2s ease;
+
+        &:hover{
+            color: #e87e00;
+        }
     }
 
     &__video{

@@ -41,6 +41,12 @@
             font-size: 18px;
             line-height: 48px;
             font-weight: bold;
+            transition: color .2s ease;
+
+            &:hover{
+                color: #e87e00;
+            }
+
             &:not(:last-child){
                 margin-right: 50px;
             }
@@ -80,6 +86,13 @@
             font-size: 18px;
             line-height: 30px;
             font-weight: 500;
+            transition: color .2s ease;
+            cursor: pointer;
+
+            &:hover{
+                color: #e87e00;
+            }
+
             @include media-breakpoint-down(tablet) {
                 margin-bottom: 10px;
             }
@@ -114,6 +127,11 @@
         a{
             color: #e87e00;
             display: inline-block;
+            transition: color .2s ease;
+
+            &:hover{
+                color: #26130d;
+            }
         }
     }
 }

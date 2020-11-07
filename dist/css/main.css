@@ -672,7 +672,7 @@ textarea {
       padding: 19px 0; }
 
 .title {
-  color: #598814;
+  color: #107c03;
   font-size: 45px;
   text-align: center;
   font-weight: bold;
@@ -699,7 +699,9 @@ textarea {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95); }
+    background-color: rgba(255, 255, 255, 0.95);
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1); }
     .header.is-fixed .header__menu-link {
       color: #e87e00;
       -webkit-transition: color .2s ease;
@@ -924,7 +926,7 @@ textarea {
   .main__title {
     font-size: 60px;
     line-height: 72px;
-    color: #598814;
+    color: #107c03;
     font-weight: bold; }
     @media (max-width: 1199px) {
       .main__title {
@@ -1305,7 +1307,7 @@ textarea {
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background-color: #598814; }
+        background-color: #107c03; }
     .product__list-btn {
       display: none; }
       @media (max-width: 767px) {
@@ -1351,11 +1353,19 @@ textarea {
       -o-transition: background-color .3s ease-out;
       transition: background-color .3s ease-out;
       position: relative; }
+      .product__tab-btn:hover {
+        background-color: #a75f0a; }
       @media (max-width: 767px) {
         .product__tab-btn {
           width: 100%;
           text-align: left;
           padding: 20px; } }
+      .product__tab-btn.is-active {
+        background-color: #a75f0a; }
+        .product__tab-btn.is-active svg.arrow {
+          -webkit-transform: rotate(-90deg);
+              -ms-transform: rotate(-90deg);
+                  transform: rotate(-90deg); }
     @media (max-width: 1199px) {
       .product__tab-item {
         width: 138px;
@@ -1368,12 +1378,6 @@ textarea {
         margin-right: 0px !important; }
         .product__tab-item:nth-child(7), .product__tab-item:nth-child(8), .product__tab-item:nth-child(9) {
           display: none; } }
-    .product__tab-item.is-active .product__tab-btn {
-      background-color: #a75f0a; }
-    .product__tab-item.is-active svg.arrow {
-      -webkit-transform: rotate(-90deg);
-          -ms-transform: rotate(-90deg);
-              transform: rotate(-90deg); }
     .product__tab-arrow {
       display: none; }
       .product__tab-arrow svg.arrow {
@@ -1912,12 +1916,23 @@ textarea {
     line-height: 32px;
     font-weight: 500;
     text-decoration: underline;
-    display: inline; }
+    display: inline;
+    -webkit-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+    cursor: pointer; }
+    .contact__text:hover {
+      color: #e87e00; }
   .contact__tel {
     font-size: 24px;
     line-height: 32px;
     font-weight: 500;
-    text-decoration: underline; }
+    text-decoration: underline;
+    -webkit-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease; }
+    .contact__tel:hover {
+      color: #e87e00; }
   .contact__video {
     width: 794px;
     -webkit-flex-shrink: 0;
@@ -2074,7 +2089,12 @@ textarea {
       color: #655d5b;
       font-size: 18px;
       line-height: 48px;
-      font-weight: bold; }
+      font-weight: bold;
+      -webkit-transition: color .2s ease;
+      -o-transition: color .2s ease;
+      transition: color .2s ease; }
+      .footer__menu-item:hover {
+        color: #e87e00; }
       .footer__menu-item:not(:last-child) {
         margin-right: 50px; }
       @media (max-width: 1199px) {
@@ -2109,7 +2129,13 @@ textarea {
       color: #655d5b;
       font-size: 18px;
       line-height: 30px;
-      font-weight: 500; }
+      font-weight: 500;
+      -webkit-transition: color .2s ease;
+      -o-transition: color .2s ease;
+      transition: color .2s ease;
+      cursor: pointer; }
+      .footer__contact-item:hover {
+        color: #e87e00; }
       @media (max-width: 1199px) {
         .footer__contact-item {
           margin-bottom: 10px; } }
@@ -2132,7 +2158,12 @@ textarea {
     line-height: 24px; }
     .footer__text a {
       color: #e87e00;
-      display: inline-block; }
+      display: inline-block;
+      -webkit-transition: color .2s ease;
+      -o-transition: color .2s ease;
+      transition: color .2s ease; }
+      .footer__text a:hover {
+        color: #26130d; }
 
 .popup {
   background-color: rgba(0, 0, 0, 0.5);
@@ -2223,7 +2254,7 @@ textarea {
     pointer-events: none; }
   .popup__description {
     display: block;
-    color: #598814;
+    color: #107c03;
     font-size: 16px;
     line-height: 30px;
     text-align: center; }
@@ -2244,7 +2275,7 @@ textarea {
   top: 10px;
   padding: 0 10px;
   font-weight: 600;
-  color: #598814; }
+  color: #107c03; }
 
 .form__input, .form__textarea {
   display: block;

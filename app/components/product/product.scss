@@ -85,7 +85,7 @@
                 width: 5px;
                 height: 5px;
                 border-radius: 50%;
-                background-color: #598814;
+                background-color: #107c03;
             }
         }
 
@@ -134,10 +134,22 @@
             transition: background-color .3s ease-out;
             position: relative;
 
+            &:hover{
+                background-color: #a75f0a;
+            }
+
             @include media-breakpoint-down(mobile) {
                 width: 100%;
                 text-align: left;
                 padding: 20px;
+            }
+
+            &.is-active{
+                background-color: #a75f0a;
+
+                svg.arrow{
+                    transform: rotate(-90deg);
+                }
             }
         }
 
@@ -160,16 +172,6 @@
                 &:nth-child(8),
                 &:nth-child(9){
                     display: none;
-                }
-            }
-
-            &.is-active{
-                .product__tab-btn{
-                    background-color: #a75f0a;
-                }
-
-                svg.arrow{
-                    transform: rotate(-90deg);
                 }
             }
         }
