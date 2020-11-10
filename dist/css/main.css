@@ -2010,7 +2010,7 @@ video {
         padding: 0 70px; } }
     @media (max-width: 767px) {
       .footer__menu {
-        width: 215px;
+        width: 205px;
         margin: 0 auto 28px;
         padding: 0; } }
     .footer__menu-item {
@@ -2033,7 +2033,7 @@ video {
         .footer__menu-item:not(:last-child) {
           margin-right: 0px; }
         .footer__menu-item:last-child {
-          margin-left: 44px; } }
+          margin-left: 39px; } }
   .footer__contact {
     display: -webkit-box;
     display: -webkit-flex;
