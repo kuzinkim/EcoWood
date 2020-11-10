@@ -121,13 +121,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var curBtn = item
 
         curBtn.addEventListener('click', function(e){
-            this.closest('.js-parent').classList.toggle('is-active');
+            var activeBlock = this.closest('.js-parent')
+            activeBlock.classList.toggle('is-active');
 
             if (curBtn.innerText.toLowerCase() === 'показать еще' || curBtn.innerText.toLowerCase() === 'другие модели') {
                 curBtn.innerText = 'Скрыть';
             } else {
                 var btnText = curBtn.getAttribute('data-text-btn')
                 curBtn.innerText = btnText
+
+                window.scrollTo({
+                    top: activeBlock.offsetTop
+                })
             }
         })
     })
