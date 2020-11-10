@@ -1,32 +1,17 @@
 .project#project.js-parent
     .container
         .section__title
-            h2.title Наши проекты
+            h2.title Фотогаллерея
                 span.section__title-icon
                     +svg('list')
         .project__inner
             .project__col
-                .project__item(style="background-image: url(assets/images/project1.jpg)")
-                    .project__item-wrap
-                        span.project__item-title EcoWood 10
-                        span.project__item-adress г. Балашиха, МО, 2020
+                .project__item.js-popup-show(data-content=".js-popup-project" data-file="project1" style="background-image: url(assets/images/project1.jpg)")
             .project__col.project__col--bar
                 .project__col-wrapper
-                    .project__item(style="background-image: url(assets/images/project2.jpg)")
-                        .project__item-wrap
-                            span.project__item-title EcoWood 10
-                            span.project__item-adress г. Балашиха, МО, 2020
-                    .project__item(style="background-image: url(assets/images/project3.jpg)")
-                        .project__item-wrap
-                            span.project__item-title EcoWood 10
-                            span.project__item-adress г. Балашиха, МО, 2020
+                    .project__item.js-popup-show(data-content=".js-popup-project" data-file="project2" style="background-image: url(assets/images/project2.jpg)")
+                    .project__item.js-popup-show(data-content=".js-popup-project" data-file="project3" style="background-image: url(assets/images/project3.jpg)")
                 .project__col-wrapper
-                    .project__item(style="background-image: url(assets/images/project4.jpg)")
-                        .project__item-wrap
-                            span.project__item-title EcoWood 10
-                            span.project__item-adress г. Балашиха, МО, 2020
-                    .project__item(style="background-image: url(assets/images/project5.jpg)")
-                        .project__item-wrap
-                            span.project__item-title EcoWood 10
-                            span.project__item-adress г. Балашиха, МО, 2020
+                    .project__item.js-popup-show(data-content=".js-popup-project" data-file="project4" style="background-image: url(assets/images/project4.jpg)")
+                    .project__item.js-popup-show(data-content=".js-popup-project" data-file="project5" style="background-image: url(assets/images/project5.jpg)")
         span.project__btn-more.button-more.button-more--element(data-text-btn="Показать еще") Показать еще

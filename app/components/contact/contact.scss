@@ -107,62 +107,6 @@
 
         @include media-breakpoint-down(mobile) {
             height: auto;
-
-            &:before{
-                content: '';
-                display: block;
-                padding-top: 58%;
-            }
-        }
-        &::after{
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        &-icon{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%, -50%, 0);
-            z-index: 1;
-            cursor: pointer;
-            width: 90px;
-            height: 90px;
-            background-color: rgba(#e87e00, 0.65);
-            border-radius: 50%;
-            transition: all .3s ease;
-
-            @include media-breakpoint-down(mobile) {
-                width: 50px;
-                height: 50px;
-            }
-            &:hover{
-                background-color: rgba(#fff, 1);
-                transform: translate3d(-50%, -50%, 0) scale(1.1);
-                svg.play{
-                    fill: #e87e00;
-                }
-            }
-            svg.play{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                fill: #ffffff;
-                transform: translate3d(-42%, -50%, 0);
-                width: 33px;
-                height: 33px;
-                transition: fill .3s ease;
-
-                @include media-breakpoint-down(mobile) {
-                    width: 16px;
-                    height: 19px;
-                }
-            }
         }
     }
 

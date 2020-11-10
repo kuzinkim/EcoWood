@@ -4,11 +4,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // инициализация плагина плавной прокрутки по якорю
     initSmoothScrolling();
-    
+
     // Разворот текста
     var bindExpandService = function (block) {
-        block.classList.add('is-hidden');
         var button = block.querySelector('.js-more-btn');
+        var strService = block.querySelector('.js-service-text')
+        block.classList.add('is-hidden');
+
+        if(strService !== null){
+            var strLength = strService.innerHTML.length
+            
+            if(strLength < 500){
+                block.classList.add('is-button-hide');
+                block.classList.remove('is-hidden');
+            }
+        }
+
         button.addEventListener('click', function () {
             block.classList.toggle('is-hidden');
             if (button.innerText.toLowerCase() === 'развернуть') {
@@ -182,20 +193,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             tabItem.append(tableItem)
         })
     }
-
-    // Воспроизведение видео
-    var playBtn = document.querySelector('.contact__video-icon')
-
-    playBtn.addEventListener('click', function(){
-
-        var videoElement = document.getElementsByTagName('video')[0]
-
-        if (videoElement.paused) {  // если видео остановлено, запускаем
-            videoElement.play();
-        } else {
-            videoElement.pause();
-        }
-    })
 
     @@include('../components/popup/popup.js')
     @@include('../components/popup/form.js')

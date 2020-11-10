@@ -41,6 +41,19 @@
                 right: 20px;
             }
         }
+
+        &--project{
+            width: 100%;
+
+            .popup__close{
+                top: -35px;
+                right: -3px;
+            }
+
+            .popup__close-line{
+                background-color: #fff;
+            }
+        }
     }
 
     &-wrap{

@@ -23,9 +23,10 @@
                     .contact__icon
                        +svg('mail')
                     a(href="mailto:info@info.ru").contact__text info@info.ru
-            .contact__video(style="background-image: url(assets/images/video.jpg)")
-                .contact__video-icon.js-popup-show(data-content=".js-popup-video")
-                    +svg('play')
+            .contact__video
+                <video muted="mutted" loop="loop" autoplay="autoplay" width="100%" height="auto" controls="controls" poster="assets/images/video.jpg">
+                    <source src="assets/video/EcoWood.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                </video>
         .contact__bottom-wrapper
             span.contact__btn-text Остались вопросы?
             button.contact__btn.button.js-popup-show(data-content=".js-popup-feedback") Мы ответим
