@@ -130,9 +130,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 var btnText = curBtn.getAttribute('data-text-btn')
                 curBtn.innerText = btnText
 
-                window.scrollTo({
-                    top: activeBlock.offsetTop
-                })
+                if(btnText !== 'Другие модели'){
+                    
+                    window.scrollTo({
+                        top: activeBlock.offsetTop
+                    })
+                }
             }
         })
     })

@@ -50,7 +50,7 @@ function popupOpen(curentPopup, fileId) {
         if(fileId){
             var imgContainer = curentPopup.querySelector('.popup__content--project')
             var imgEl = document.createElement('img')
-            imgEl.setAttribute('src', `assets/images/${fileId}.jpg`)
+            imgEl.setAttribute('src', 'assets/images/' + fileId + '.jpg')
             imgContainer.append(imgEl)
         }
         curentPopup.addEventListener('click', function (e) {
