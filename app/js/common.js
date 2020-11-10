@@ -61,11 +61,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 this.classList.add('is-active');
 
                 if(screen.width < 768){
-                    var tabOffsetTop = this.getBoundingClientRect().top - 60
+                    var tabOffsetTop = this.getBoundingClientRect().top
 
                     window.scrollBy({
                         top: tabOffsetTop
                     })
+
+                    setTimeout(function(){
+
+                        window.scrollBy({
+                            top: -60
+                        })
+                    }, 0)
                 }
 
                 tabName = this.getAttribute('data-id');
