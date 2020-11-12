@@ -5,36 +5,41 @@
         text-align: center;
     }
     &__inner{
+        text-align: center;
+        &.is-hidden{
+            .about__wrapper{
+                max-height: 318px;
+                position: relative;
+                overflow: hidden;
+                &::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100px;
+                    background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255, 255, 255, 0)));
+                    background: -o-linear-gradient(bottom, #fff, rgba(255, 255, 255, 0));
+                    background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0));
+                    opacity: 1;
+                    transition: opacity .4s ease;
+                }
+            }
+        }
+    }
+
+    &__wrapper{
         column-count: 2;
         column-gap: 43px;
         margin-top: 35px;
+        text-align: left;
+        max-height: 2000px;
+        transition: all .4s ease;
+        overflow: hidden;
 
         @include media-breakpoint-down(tablet) {
             column-count: 1;
-        }
-
-        @include media-breakpoint-down(mobile) {
-            &.is-hidden{
-                .about__description{
-                    max-height: 480px;
-                    position: relative;
-                    overflow: hidden;
-                    &::after{
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        height: 100px;
-                        background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255, 255, 255, 0)));
-                        background: -o-linear-gradient(bottom, #fff, rgba(255, 255, 255, 0));
-                        background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0));
-                        opacity: 1;
-                        transition: opacity .4s ease;
-                    }
-                }
-            }
         }
     }
 
@@ -43,13 +48,6 @@
         line-height: 32px;
         font-weight: 500;
         text-align: left;
-
-        @include media-breakpoint-down(mobile) {
-            display: block;
-            max-height: 2000px;
-            transition: all .4s ease;
-            
-        }
     }
 
     &__advantages{
@@ -146,11 +144,19 @@
     }
 
     &__btn{
-        display: none;
+        display: inline-block;
+        margin-top: 20px;
+    }
 
-        @include media-breakpoint-down(mobile) {
-            display: inline-block;
-            margin-top: 20px;
+    &__list{
+        padding-left: 20px;
+        margin: 15px 0 20px;
+
+        &-item{
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 500;
+            margin-bottom: 10px;
         }
     }
         

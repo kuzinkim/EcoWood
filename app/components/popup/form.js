@@ -39,10 +39,22 @@ new window.JustValidate('.js-form-leasing', {
     focusWrongField: true,
 
     submitHandler: function (form, values, ajax) {
-        var activePopup = document.querySelector('.popup.open');
-        var successPopup = document.querySelector('.js-popup-success');
-        activePopup.classList.remove('open')
-        successPopup.classList.add('open')
+        ajax({
+            url: '../ajax.php',
+            method: 'POST',
+            data: values,
+            async: true,
+            callback: function (response) {
+                var data = JSON.parse(response);
+
+                if(data.status == "success"){
+                    var activePopup = document.querySelector('.popup.open');
+                    var successPopup = document.querySelector('.js-popup-success');
+                    activePopup.classList.remove('open')
+                    successPopup.classList.add('open')
+                }
+            }
+        });
     },
 });
 
@@ -71,10 +83,22 @@ new window.JustValidate('.js-form-price', {
     focusWrongField: true,
 
     submitHandler: function (form, values, ajax) {
-        var activePopup = document.querySelector('.popup.open');
-        var successPopup = document.querySelector('.js-popup-success');
-        activePopup.classList.remove('open')
-        successPopup.classList.add('open')
+        ajax({
+            url: '../ajax.php',
+            method: 'POST',
+            data: values,
+            async: true,
+            callback: function (response) {
+                var data = JSON.parse(response);
+
+                if(data.status == "success"){
+                    var activePopup = document.querySelector('.popup.open');
+                    var successPopup = document.querySelector('.js-popup-success');
+                    activePopup.classList.remove('open')
+                    successPopup.classList.add('open')
+                }
+            }
+        });
     },
 });
 
@@ -109,9 +133,21 @@ new window.JustValidate('.js-form-feedback', {
     focusWrongField: true,
 
     submitHandler: function (form, values, ajax) {
-        var activePopup = document.querySelector('.popup.open');
-        var successPopup = document.querySelector('.js-popup-success');
-        activePopup.classList.remove('open')
-        successPopup.classList.add('open')
+        ajax({
+            url: '../ajax.php',
+            method: 'POST',
+            data: values,
+            async: true,
+            callback: function (response) {
+                var data = JSON.parse(response);
+
+                if(data.status == "success"){
+                    var activePopup = document.querySelector('.popup.open');
+                    var successPopup = document.querySelector('.js-popup-success');
+                    activePopup.classList.remove('open')
+                    successPopup.classList.add('open')
+                }
+            }
+        });
     },
 });

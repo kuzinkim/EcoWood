@@ -30,7 +30,7 @@
         }
 
         @include media-breakpoint-down(mobile) {
-            width: 205px;
+            width: 200px;
             margin: 0 auto 28px;
             padding: 0;
         }
@@ -61,7 +61,7 @@
                     margin-right: 0px;
                 }
                 &:last-child{
-                    margin-left: 39px;
+                    margin-left: 25px;
                 }
             }
         }
