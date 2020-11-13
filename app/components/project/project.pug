@@ -1,17 +1,36 @@
 .project#project.js-parent
     .container
         .section__title
-            h2.title Фотогалерея
+            h2.title Наши проекты
                 span.section__title-icon
                     +svg('list')
-        .project__inner
-            .project__col
-                .project__item.js-popup-show(data-content=".js-popup-project" data-file="project1" style="background-image: url(assets/images/project1.jpg)")
-            .project__col.project__col--bar
-                .project__col-wrapper
-                    .project__item.js-popup-show(data-content=".js-popup-project" data-file="project2" style="background-image: url(assets/images/project2.jpg)")
-                    .project__item.js-popup-show(data-content=".js-popup-project" data-file="project3" style="background-image: url(assets/images/project3.jpg)")
-                .project__col-wrapper
-                    .project__item.js-popup-show(data-content=".js-popup-project" data-file="project4" style="background-image: url(assets/images/project4.jpg)")
-                    .project__item.js-popup-show(data-content=".js-popup-project" data-file="project5" style="background-image: url(assets/images/project5.jpg)")
+        .project__slider
+            .swiper-container
+                .swiper-wrapper.project__wrapper
+                    .project__inner.swiper-slide
+                        .project__col
+                            .project__item.js-popup-show(data-content=".js-popup-project" data-file="project1" style="background-image: url(assets/images/project1.jpg)")
+                        .project__col.project__col--bar
+                            .project__col-wrapper
+                                .project__item.js-popup-show(data-content=".js-popup-project" data-file="project2" style="background-image: url(assets/images/project2.jpg)")
+                                .project__item.js-popup-show(data-content=".js-popup-project" data-file="project3" style="background-image: url(assets/images/project3.jpg)")
+                            .project__col-wrapper
+                                .project__item.js-popup-show(data-content=".js-popup-project" data-file="project4" style="background-image: url(assets/images/project4.jpg)")
+                                .project__item.js-popup-show(data-content=".js-popup-project" data-file="project5" style="background-image: url(assets/images/project5.jpg)")
+                    .project__inner.swiper-slide
+                        .project__col
+                            .project__item.js-popup-show(data-content=".js-popup-project" data-file="6" style="background-image: url(assets/images/6.jpg)")
+                        .project__col.project__col--bar
+                            .project__col-wrapper
+                                .project__item.js-popup-show(data-content=".js-popup-project" data-file="7" style="background-image: url(assets/images/7.jpg)")
+                                .project__item.js-popup-show(data-content=".js-popup-project" data-file="8" style="background-image: url(assets/images/8.jpg)")
+                            .project__col-wrapper
+                                .project__item.js-popup-show(data-content=".js-popup-project" data-file="9" style="background-image: url(assets/images/9.jpg)")
+                                .project__item.js-popup-show(data-content=".js-popup-project" data-file="10" style="background-image: url(assets/images/10.jpg)")
+            .project-button.project-button--next
+                .project-button-icon
+                    +svg('arrow-up')
+            .project-button.project-button--prev
+                .project-button-icon
+                    +svg('arrow-up')
         span.project__btn-more.button-more.button-more--element(data-text-btn="Показать еще") Показать еще

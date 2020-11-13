@@ -91,13 +91,13 @@
         }
     }
 
-    &__video{
-        width: 794px;
+    &__pic{
+        width: 684px;
         flex-shrink: 0;
         position: relative;
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: cover;
+        background-size: contain;
 
         @include media-breakpoint-down(tablet) {
             width: 100%;
@@ -107,6 +107,11 @@
 
         @include media-breakpoint-down(mobile) {
             height: auto;
+            &::after{
+                content: '';
+                padding-top: 80%;
+                display: block;
+            }
         }
     }
 

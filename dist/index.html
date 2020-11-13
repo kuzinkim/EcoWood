@@ -23,19 +23,15 @@
     <div class="wrapper">
       <div class="header lock-padding">
         <div class="container container--fluid">
-          <div class="header__inner">
+          <div class="header__inner"><a class="header__logo" href="#main"><img src="assets/images/logo.jpg" alt="logo"/></a>
             <nav class="header__menu">
-              <div class="header__menu-left">
-                <div class="header__menu-item"><a class="header__menu-link" href="#main">Главная</a></div>
-                <div class="header__menu-item"><a class="header__menu-link" href="#about">О компании</a></div>
-                <div class="header__menu-item"><a class="header__menu-link" href="#product">Сушильные камеры</a></div>
-              </div>
-              <div class="header__menu-right">
-                <div class="header__menu-item"><a class="header__menu-link" href="#project">Фотогалерея</a></div>
-                <div class="header__menu-item"><a class="header__menu-link" href="#leasing">Лизинг</a></div>
-                <div class="header__menu-item"><a class="header__menu-link" href="#contact">Контакты</a></div>
-              </div>
-            </nav><a class="header__logo" href="#main"><img src="assets/images/logo.jpg" alt="logo"/></a>
+              <div class="header__menu-item"><a class="header__menu-link" href="#main">Главная</a></div>
+              <div class="header__menu-item"><a class="header__menu-link" href="#about">О компании</a></div>
+              <div class="header__menu-item"><a class="header__menu-link" href="#product">Сушильные камеры</a></div>
+              <div class="header__menu-item"><a class="header__menu-link" href="#project">Наши проекты</a></div>
+              <div class="header__menu-item"><a class="header__menu-link" href="#leasing">Лизинг</a></div>
+              <div class="header__menu-item"><a class="header__menu-link" href="#contact">Контакты</a></div>
+            </nav>
             <div class="header__burger burg js-burg">
               <div class="burg__line"></div>
               <div class="burg__line"></div>
@@ -578,23 +574,58 @@
       <div class="project js-parent" id="project">
         <div class="container">
           <div class="section__title">
-            <h2 class="title">Фотогалерея<span class="section__title-icon">
+            <h2 class="title">Наши проекты<span class="section__title-icon">
                 <svg class="icon list">
                   <use xlink:href="#list"></use>
                 </svg></span></h2>
           </div>
-          <div class="project__inner">
-            <div class="project__col">
-              <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project1" style="background-image: url(assets/images/project1.jpg)"></div>
-            </div>
-            <div class="project__col project__col--bar">
-              <div class="project__col-wrapper">
-                <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project2" style="background-image: url(assets/images/project2.jpg)"></div>
-                <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project3" style="background-image: url(assets/images/project3.jpg)"></div>
+          <div class="project__slider">
+            <div class="swiper-container">
+              <div class="swiper-wrapper project__wrapper">
+                <div class="project__inner swiper-slide">
+                  <div class="project__col">
+                    <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project1" style="background-image: url(assets/images/project1.jpg)"></div>
+                  </div>
+                  <div class="project__col project__col--bar">
+                    <div class="project__col-wrapper">
+                      <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project2" style="background-image: url(assets/images/project2.jpg)"></div>
+                      <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project3" style="background-image: url(assets/images/project3.jpg)"></div>
+                    </div>
+                    <div class="project__col-wrapper">
+                      <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project4" style="background-image: url(assets/images/project4.jpg)"></div>
+                      <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project5" style="background-image: url(assets/images/project5.jpg)"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="project__inner swiper-slide">
+                  <div class="project__col">
+                    <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="6" style="background-image: url(assets/images/6.jpg)"></div>
+                  </div>
+                  <div class="project__col project__col--bar">
+                    <div class="project__col-wrapper">
+                      <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="7" style="background-image: url(assets/images/7.jpg)"></div>
+                      <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="8" style="background-image: url(assets/images/8.jpg)"></div>
+                    </div>
+                    <div class="project__col-wrapper">
+                      <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="9" style="background-image: url(assets/images/9.jpg)"></div>
+                      <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="10" style="background-image: url(assets/images/10.jpg)"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="project__col-wrapper">
-                <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project4" style="background-image: url(assets/images/project4.jpg)"></div>
-                <div class="project__item js-popup-show" data-content=".js-popup-project" data-file="project5" style="background-image: url(assets/images/project5.jpg)"></div>
+            </div>
+            <div class="project-button project-button--next">
+              <div class="project-button-icon">
+                <svg class="icon arrow-up">
+                  <use xlink:href="#arrow-up"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="project-button project-button--prev">
+              <div class="project-button-icon">
+                <svg class="icon arrow-up">
+                  <use xlink:href="#arrow-up"></use>
+                </svg>
               </div>
             </div>
           </div><span class="project__btn-more button-more button-more--element" data-text-btn="Показать еще">Показать еще</span>
@@ -664,10 +695,7 @@
                 </div><a class="contact__text" href="mailto:info@ecowood.com.ru">info@ecowood.com.ru</a>
               </div>
             </div>
-            <div class="contact__video"><video muted="mutted" loop="loop" autoplay="autoplay" width="100%" height="auto" controls="controls" poster="assets/images/video.jpg">
-<source src="assets/video/EcoWood.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-</video>
-            </div>
+            <div class="contact__pic" style="background-image: url(assets/images/contacts.png)"></div>
           </div>
           <div class="contact__bottom-wrapper"><span class="contact__btn-text">Остались вопросы?</span>
             <button class="contact__btn button js-popup-show" data-content=".js-popup-feedback">Мы ответим!</button>
@@ -677,7 +705,7 @@
       <div class="footer">
         <div class="container">
           <div class="footer__inner"><a class="footer__logo" href="#main"><img src="assets/images/footer-logo.png" alt=""/></a>
-            <nav class="footer__menu"><a class="footer__menu-item" href="#about">О компании</a><a class="footer__menu-item" href="#product">Сушильные камеры </a><a class="footer__menu-item" href="#project">Фотогалерея </a><a class="footer__menu-item" href="#leasing">Лизинг</a><a class="footer__menu-item" href="#contact">Контакты</a></nav>
+            <nav class="footer__menu"><a class="footer__menu-item" href="#about">О компании</a><a class="footer__menu-item" href="#product">Сушильные камеры </a><a class="footer__menu-item" href="#project">Наши проекты</a><a class="footer__menu-item" href="#leasing">Лизинг</a><a class="footer__menu-item" href="#contact">Контакты</a></nav>
             <div class="footer__contact"><span class="footer__contact-item">105318, Москва, Семёновская пл. 1А</span>
               <div class="footer__contact-wrapper"> <a class="footer__contact-item" href="tel:88005118355">8 (800) 511-83-55</a><a class="footer__contact-item" href="tel:+74951376255">+7 (495) 137-62-55 </a></div><a class="footer__contact-item" href="mailto:info@ecowood.com.ru">info@ecowood.com.ru</a>
             </div><span class="footer__text">Вы принимаете условия <a href="assets/conf.pdf" target="_blank">политики конфиденциальности</a> каждый раз, когда оставляете свои данные в любой форме обратной связи на сайте ecowood.com.ru</span>

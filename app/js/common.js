@@ -209,6 +209,54 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     }
 
+
+    const breakpoint = window.matchMedia( '(max-width:767px)' );
+
+    let mySwiper;
+
+    const breakpointChecker = function() {
+
+        if ( breakpoint.matches === true ) {
+
+        if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+
+        return;
+
+        } else if ( breakpoint.matches === false ) {
+            return enableSwiper();
+        }
+
+    };
+
+    const enableSwiper = function() {
+
+        mySwiper = new Swiper ('.swiper-container', {
+            navigation: {
+              nextEl: '.project-button--next',
+              prevEl: '.project-button--prev',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true,
+            },
+            simulateTouch: false
+        });
+    };
+
+    breakpoint.addListener(breakpointChecker);
+
+    breakpointChecker();
+
+    var slider = document.querySelector('.swiper-container')
+
+    slider.addEventListener('mouseenter', function(){
+        mySwiper.autoplay.stop();
+    })
+
+    slider.addEventListener('mouseleave', function(){
+        mySwiper.autoplay.start();
+    })
+
     @@include('../components/popup/popup.js')
     @@include('../components/popup/form.js')
 
