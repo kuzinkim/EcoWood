@@ -1356,7 +1356,7 @@ video {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-top: 45px;
-    margin-bottom: 55px; }
+    margin-bottom: 35px; }
     .product__tab-btn {
       width: 119px;
       background-color: #e87e00;
@@ -1454,7 +1454,10 @@ video {
   .product__btn {
     font-weight: 800;
     font-size: 24px;
-    position: relative; }
+    position: relative;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px; }
     .product__btn::after, .product__btn::before {
       content: '';
       position: absolute;
@@ -1477,6 +1480,11 @@ video {
       @media (max-width: 767px) {
         .product__btn::before {
           right: 110%; } }
+    @media (max-width: 767px) {
+      .product__btn {
+        font-size: 20px;
+        padding-left: 14px;
+        padding-right: 14px; } }
   @media (max-width: 1199px) {
     .product .section__title-icon {
       left: 75px; } }
@@ -1495,6 +1503,21 @@ video {
     max-height: 750px; }
     .characteristics.is-hidden .characteristics__table::after {
       opacity: 1; }
+  .characteristics__price, .characteristics__description {
+    display: block;
+    font-weight: 500; }
+  .characteristics__price {
+    font-weight: 700;
+    font-size: 28px; }
+    @media (max-width: 767px) {
+      .characteristics__price {
+        margin-top: 20px; } }
+  .characteristics__description {
+    margin-bottom: 30px;
+    margin-top: 15px; }
+    @media (max-width: 767px) {
+      .characteristics__description {
+        margin-top: 20px; } }
   .characteristics__table {
     font-weight: 500;
     font-size: 16px;
@@ -1623,7 +1646,7 @@ video {
                 flex-wrap: wrap;
         height: auto; } }
     @media (max-width: 767px) {
-      .project__inner:nth-child(2) {
+      .project__inner:nth-child(2), .project__inner:nth-child(3) {
         display: none; } }
   .project .section__title {
     margin-bottom: 45px; }
@@ -1738,7 +1761,8 @@ video {
       .project__btn-more {
         display: inline-block;
         margin-top: 40px; } }
-  .project.is-active .project__inner:nth-child(2) {
+  .project.is-active .project__inner:nth-child(2),
+  .project.is-active .project__inner:nth-child(3) {
     display: block; }
   .project-button {
     width: 90px;

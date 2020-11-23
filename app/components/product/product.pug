@@ -14,7 +14,6 @@
                         li.product__list-item Толщина внутреннего алюминия <strong>1,0 мм;</strong>
                         li.product__list-item Толщина стен – <strong>165 мм</strong> (при  толщине утеплителя – 150 мм);
                         li.product__list-item Толщина утеплителя минеральной ваты или пенополиостирола стеновых  полностью &nbsp;алюминиевых панелей <strong>150 мм</strong>;
-                        li.product__list-item Внутреннее оборудование ведущих европейских изготовителей: <strong>Belimo, Dunfos, Logica, Lafert</strong>;
                         li.product__list-item Двухсторонняя система увлажнения &nbsp;<strong>Danfoss </strong>(Дания);
                         li.product__list-item Трёхходовой кран <strong>Belimo </strong>(Швейцария);
                         li.product__list-item Удобные размеры для загрузки 6,6 метра;
@@ -27,55 +26,55 @@
                 .product__pic(style="background-image: url(assets/images/product.jpg)")
             .product__tab.js-parent.scrollto
                 .product__tab-item
-                    .product__tab-btn(data-id="10")
+                    .product__tab-btn(data-id="10" data-text="Получить предложение")
                         span.product__tab-title EcoWood
                         span.product__tab-num 10
                         .product__tab-arrow
                             +svg('arrow')
                 .product__tab-item
-                    .product__tab-btn(data-id="30")
+                    .product__tab-btn(data-id="30" data-text="Получить предложение")
                         span.product__tab-title EcoWood
                         span.product__tab-num 30
                         .product__tab-arrow
                             +svg('arrow')
                 .product__tab-item
-                    .product__tab-btn.is-active(data-id="50")
+                    .product__tab-btn.is-active(data-id="50" data-text="Получить предложение")
                         span.product__tab-title EcoWood
                         span.product__tab-num 50
                         .product__tab-arrow
                             +svg('arrow')
                 .product__tab-item
-                    .product__tab-btn(data-id="60")
+                    .product__tab-btn(data-id="60" data-text="Получить предложение")
                         span.product__tab-title EcoWood
                         span.product__tab-num 60
                         .product__tab-arrow
                             +svg('arrow')
                 .product__tab-item
-                    .product__tab-btn(data-id="75")
+                    .product__tab-btn(data-id="75" data-text="Получить предложение")
                         span.product__tab-title EcoWood
                         span.product__tab-num 75
                         .product__tab-arrow
                             +svg('arrow')
                 .product__tab-item
-                    .product__tab-btn(data-id="80")
+                    .product__tab-btn(data-id="80" data-text="Узнать цену")
                         span.product__tab-title EcoWood
                         span.product__tab-num 80
                         .product__tab-arrow
                             +svg('arrow')
                 .product__tab-item
-                    .product__tab-btn(data-id="100")
+                    .product__tab-btn(data-id="100" data-text="Узнать цену")
                         span.product__tab-title EcoWood
                         span.product__tab-num 100
                         .product__tab-arrow
                             +svg('arrow')
                 .product__tab-item
-                    .product__tab-btn(data-id="120")
+                    .product__tab-btn(data-id="120" data-text="Узнать цену")
                         span.product__tab-title EcoWood
                         span.product__tab-num 120
                         .product__tab-arrow
                             +svg('arrow')
                 .product__tab-item
-                    .product__tab-btn(data-id="150")
+                    .product__tab-btn(data-id="150" data-text="Узнать цену")
                         span.product__tab-title EcoWood
                         span.product__tab-num 150
                         .product__tab-arrow
@@ -83,6 +82,9 @@
                 span.product__tab-more.button-more.button-more--element(data-text-btn="Другие модели") Другие модели
             .product__characteristics-wrapper
                 .product__characteristics.characteristics.js-hidden-container(id="10")
+                    .characteristics__top
+                        span.characteristics__price 1 125 000* ₽
+                        span.characteristics__description * - цена за 1 шт. При заказе комплекта из 2-х, 3-х и более камер - цена рассчитывается индивидуально!
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (ширина х глубина х высота):
@@ -151,12 +153,15 @@
                             span.characteristics__table-text Электрощит:
                             span.characteristics__table-value 1 шт. (380-400 В, 50 Гц
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Получить предложение
                 .product__characteristics.characteristics.js-hidden-container(id="30")
+                    .characteristics__top
+                        span.characteristics__price 2 225 500* ₽
+                        span.characteristics__description * - цена за 1 шт. При заказе комплекта из 2-х, 3-х и более камер - цена рассчитывается индивидуально!
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,7 х 4,3 х 4,1 м
+                            span.characteristics__table-value 6,6 х 4,3 х 4,1 м
                         .characteristics__table-row
                             span.characteristics__table-text Внешний габарит сушильной камеры:
                             span.characteristics__table-value 7,0 х 4,6 х 5,4 м
@@ -224,8 +229,11 @@
                             span.characteristics__table-text Электрощит с дублирующим ручным управлением:
                             span.characteristics__table-value 1 шт. (380-400 В, 50 Гц)
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Получить предложение
                 .product__characteristics.characteristics.is-active.js-hidden-container(id="50")
+                    .characteristics__top
+                        span.characteristics__price 2 862 500* ₽
+                        span.characteristics__description * - цена за 1 шт. При заказе комплекта из 2-х, 3-х и более камер - цена рассчитывается индивидуально!
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
@@ -303,12 +311,15 @@
                             span.characteristics__table-text Горизонтальны и вертикальные шторки
                             span.characteristics__table-value Есть
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Получить предложение
                 .product__characteristics.characteristics.js-hidden-container(id="60")
+                    .characteristics__top
+                        span.characteristics__price 3 137 050* ₽
+                        span.characteristics__description * - цена за 1 шт. При заказе комплекта из 2-х, 3-х и более камер - цена рассчитывается индивидуально!
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
-                            span.characteristics__table-value 6,7 х 7,1 х 4,1 м
+                            span.characteristics__table-value 6,6 х 7,1 х 4,1 м
                         .characteristics__table-row
                             span.characteristics__table-text Внешний габарит сушильной камеры:
                             span.characteristics__table-value 7,0 х 7,5 х 5,5 м
@@ -379,8 +390,11 @@
                             span.characteristics__table-text Тележка для подъёма и сдвига ворот:
                             span.characteristics__table-value Механическая, с редуктором
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Получить предложение
                 .product__characteristics.characteristics.js-hidden-container(id="75")
+                    .characteristics__top
+                        span.characteristics__price 3 343 750* ₽
+                        span.characteristics__description * - цена за 1 шт. При заказе комплекта из 2-х, 3-х и более камер - цена рассчитывается индивидуально!
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
@@ -458,8 +472,10 @@
                             span.characteristics__table-text Горизонтальны и вертикальные шторки
                             span.characteristics__table-value Есть
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
-                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+                    button.product__btn.button.js-popup-show(data-content=".js-popup-price") Получить предложение
                 .product__characteristics.characteristics.js-hidden-container(id="80")
+                    .characteristics__top
+                        span.characteristics__description При заказе комплекта из 2-х, 3-х и более камер - цена рассчитывается индивидуально!
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
@@ -536,6 +552,8 @@
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
                     button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
                 .product__characteristics.characteristics.js-hidden-container(id="100")
+                    .characteristics__top
+                        span.characteristics__description При заказе комплекта из 2-х, 3-х и более камер - цена рассчитывается индивидуально!
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
@@ -615,6 +633,8 @@
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
                     button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
                 .product__characteristics.characteristics.js-hidden-container(id="120")
+                    .characteristics__top
+                        span.characteristics__description При заказе комплекта из 2-х, 3-х и более камер - цена рассчитывается индивидуально!
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
@@ -688,6 +708,8 @@
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
                     button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
                 .product__characteristics.characteristics.js-hidden-container(id="150")
+                    .characteristics__top
+                        span.characteristics__description При заказе комплекта из 2-х, 3-х и более камер - цена рассчитывается индивидуально!
                     .characteristics__table
                         .characteristics__table-row
                             span.characteristics__table-text Внутренний (полезный) размер сушильной камеры (фронт х глубина х высота до фальш. потолка):
@@ -754,6 +776,6 @@
                             span.characteristics__table-value Механическая, с редуктором
                     span.characteristics__btn.button-more.button-more--text.js-more-btn Развернуть
                     button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
-        button.product__btn.button.js-popup-show(data-content=".js-popup-price") Узнать цену
+        button.product__btn.button.js-popup-show.js-product-button(data-content=".js-popup-price") Получить предложение
                             
 

@@ -11,7 +11,8 @@
         }
 
         @include media-breakpoint-down(mobile) {
-            &:nth-child(2){
+            &:nth-child(2),
+            &:nth-child(3){
                 display: none;
             }
         }
@@ -145,7 +146,8 @@
     }
 
     &.is-active{
-        .project__inner:nth-child(2){
+        .project__inner:nth-child(2),
+        .project__inner:nth-child(3){
             display: block;
         }
     }

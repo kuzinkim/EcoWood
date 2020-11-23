@@ -43,8 +43,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     function tab() {
         var tabNav = document.querySelectorAll('.product__tab-btn'),
             tabContent = document.querySelectorAll('.characteristics'),
-            popupPrice = document.querySelector('.js-popup-num'),
-            tabName;
+            popupTitle = document.querySelector('.js-popup-title'),
+            productBtn = document.querySelector('.js-product-button'),
+            tabId,
+            tabDataText;
             
             tabNav.forEach(function(item){
                 item.addEventListener('click', selectTabNav);
@@ -75,9 +77,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     }, 0)
                 }
 
-                tabName = this.getAttribute('data-id');
-                selectTabContent(tabName);
-                popupPrice.innerHTML = tabName;
+                tabId = this.getAttribute('data-id');
+                tabDataText = this.getAttribute('data-text');
+                productBtn.textContent = tabDataText
+                selectTabContent(tabId);
+
+                if(tabDataText == "Получить предложение"){
+                    popupTitle.textContent = "Получить предложение"
+                }else{
+                    popupTitle.textContent = "Узнать цену на EcoWood" + " " + tabId
+                }
                 
             }
 
