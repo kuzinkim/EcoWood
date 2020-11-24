@@ -45,9 +45,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             tabContent = document.querySelectorAll('.characteristics'),
             popupTitle = document.querySelector('.js-popup-title'),
             productBtn = document.querySelector('.js-product-button'),
+            inputProductTitle = document.getElementById('product_title'),
+            inputProduct = document.getElementById('product_id'),
             tabId,
             tabDataText;
-            
+
             tabNav.forEach(function(item){
                 item.addEventListener('click', selectTabNav);
             })
@@ -81,6 +83,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 tabDataText = this.getAttribute('data-text');
                 productBtn.textContent = tabDataText
                 selectTabContent(tabId);
+                inputProductTitle.setAttribute('value', tabDataText)
+                inputProduct.setAttribute('value', 'EcoWood' + ' ' + tabId)
 
                 if(tabDataText == "Получить предложение"){
                     popupTitle.textContent = "Получить КП на EcoWood" + " " + tabId

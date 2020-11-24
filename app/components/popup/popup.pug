@@ -27,7 +27,8 @@
                 .popup__title
                     h2.title.js-popup-title Получить предложение
                 form.popup__form.form.js-form-price(action="#")
-                    input(type="hidden" name="title" value="Узнать цену")
+                    input(type="hidden" name="title" value="Получить предложение" id="product_title")
+                    input(type="hidden" name="product" value="EcoWood 50" id="product_id")
                     .form__field
                         label.form__label Ваше имя
                         input.form__input(type="text", name="name" placeholder="Александр" data-validate-field="name" autocomplete="off")
