@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 selectTabContent(tabId);
 
                 if(tabDataText == "Получить предложение"){
-                    popupTitle.textContent = "Получить предложение"
+                    popupTitle.textContent = "Получить КП на EcoWood" + " " + tabId
                 }else{
                     popupTitle.textContent = "Узнать цену на EcoWood" + " " + tabId
                 }
