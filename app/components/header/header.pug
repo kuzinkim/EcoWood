@@ -1,23 +1,53 @@
 .header.lock-padding
-    .container.container--fluid
+    .container
         .header__inner
-            a(href="#main").header__logo
-                img(src="assets/images/logo.jpg", alt="logo")
-            nav.header__menu
-                .header__menu-item
-                    a(href="#main").header__menu-link Главная
-                .header__menu-item
-                    a(href="#about").header__menu-link О компании
-                .header__menu-item
-                    a(href="#product").header__menu-link Сушильные камеры
-                .header__menu-item
-                    a(href="#project").header__menu-link Наши проекты
-                .header__menu-item
-                    a(href="#leasing").header__menu-link Лизинг
-                .header__menu-item
-                    a(href="#contact").header__menu-link Контакты
-            .header__burger.burg.js-burg
-                .burg__line
-                .burg__line
-                .burg__line
-                .burg__line
+            .header__wrap
+                a(href="#main").header__logo
+                    img(src="assets/images/logo.svg", alt="logo")
+                span.header__text Производим сушильные камеры и котельные установки
+            .header-right
+                .header-contact
+                    .header-contact__mail
+                        a(href="mailto:info@ecowood.com.ru") info@ecowood.com.ru
+                    .header-contact__phone
+                        a(href="tel:+74951376255") + 7 (495) 137-62-55
+                        a(href="tel:88005118355") 8 (800) 511-83-55
+                .header__menu
+                    .header__catalog.catalog
+                        a(href="#").catalog__btn Каталог
+                        .catalog__dropdown
+                            .catalog__item
+                                .catalog__item-head 
+                                    .catalog__pic 
+                                        img(src="assets/images/catalog1.png", alt="")
+                                    span.catalog__name Сушильные<br> камеры
+                                ul.catalog__list
+                                    li.catalog__list-item Пресс-вакуумные сушильные камеры ML
+                                    li.catalog__list-item Турбовакуумные сушильные камеры для слэбов EcoWood
+                                    li.catalog__list-item Конвективные сушильные камеры
+                            .catalog__item
+                                .catalog__item-head 
+                                    .catalog__pic
+                                        img(src="assets/images/catalog2.png", alt="")
+                                    span.catalog__name Котельные<br> установки
+                                ul.catalog__list
+                                    li.catalog__list-item Котельные на отходах
+                                    li.catalog__list-item Duis aute irure dolor in reprehenderit in voluptate velit
+                                    li.catalog__list-item Esse cillum dolore eu fugiat nulla pariatur excepteur sint
+                    .header__search
+                        form.header__search-form.form-search(action="#")
+                            .form-search__field
+                                input(type="text").header__search-input
+                                button.header__search-btn
+                    nav.header__nav 
+                        .header__nav-item
+                            a(href="#about").header__nav-link О компании
+                        .header__nav-item
+                            a(href="#service").header__nav-link Услуги
+                        .header__nav-item
+                            a(href="#contact").header__nav-link Контакты
+                .header__burger.burg.js-burg
+                    .burg__line
+                    .burg__line
+                    .burg__line
+                    .burg__line

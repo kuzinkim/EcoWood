@@ -111,27 +111,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
     tab();
 
     // Фксирование шапки и отображение кнопки навверх
-    var buttonUp = document.querySelector('.button-up')
+    // var buttonUp = document.querySelector('.button-up')
 
-    window.addEventListener('scroll', function(e){
-        var pageScrollTop = window.pageYOffset;
-        var header = document.querySelector('.header');
-        var headerHeight = header.clientHeight + 40;
+    // window.addEventListener('scroll', function(e){
+    //     var pageScrollTop = window.pageYOffset;
+    //     var header = document.querySelector('.header');
+    //     var headerHeight = header.clientHeight + 40;
 
-        if(pageScrollTop >= headerHeight){
-            header.classList.add('is-fixed');
-        }else{
-            header.classList.remove('is-fixed');
-        }
+    //     if(pageScrollTop >= headerHeight){
+    //         header.classList.add('is-fixed');
+    //     }else{
+    //         header.classList.remove('is-fixed');
+    //     }
 
-        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    //     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrolled > 700) {
-            buttonUp.classList.add('is-show');
-        } else {
-            buttonUp.classList.remove('is-show');
-        }
-    })
+    //     if (scrolled > 700) {
+    //         buttonUp.classList.add('is-show');
+    //     } else {
+    //         buttonUp.classList.remove('is-show');
+    //     }
+    // })
 
     // Показать больше продуктов
 
@@ -162,9 +162,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // Мобильное меню
     var burger = document.querySelector('.js-burg');
-    var headerMenu = document.querySelector('.header__menu');
+    var headerMenu = document.querySelector('.header__nav');
     var wrapper = document.querySelector('.wrapper');
-    var headerMenuLink = document.querySelectorAll('.header__menu-link');
+    var headerMenuLink = document.querySelectorAll('.header__nav-link');
 
 
     burger.addEventListener('click', function(){
@@ -223,55 +223,52 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
 
-    const breakpoint = window.matchMedia( '(max-width:767px)' );
+    // const breakpoint = window.matchMedia( '(max-width:767px)' );
 
-    let mySwiper;
+    // let mySwiper;
 
-    const breakpointChecker = function() {
+    // const breakpointChecker = function() {
 
-        if ( breakpoint.matches === true ) {
+    //     if ( breakpoint.matches === true ) {
 
-        if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+    //     if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
 
-        return;
+    //     return;
 
-        } else if ( breakpoint.matches === false ) {
-            return enableSwiper();
-        }
+    //     } else if ( breakpoint.matches === false ) {
+    //         return enableSwiper();
+    //     }
 
-    };
+    // };
 
-    const enableSwiper = function() {
+    // const enableSwiper = function() {
 
-        mySwiper = new Swiper ('.swiper-container', {
-            navigation: {
-              nextEl: '.project-button--next',
-              prevEl: '.project-button--prev',
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: true,
-            },
-            simulateTouch: false
-        });
-    };
+    //     mySwiper = new Swiper ('.swiper-container', {
+    //         navigation: {
+    //           nextEl: '.project-button--next',
+    //           prevEl: '.project-button--prev',
+    //         },
+    //         autoplay: {
+    //             delay: 5000,
+    //             disableOnInteraction: true,
+    //         },
+    //         simulateTouch: false
+    //     });
+    // };
 
-    breakpoint.addListener(breakpointChecker);
+    // breakpoint.addListener(breakpointChecker);
 
-    breakpointChecker();
+    // breakpointChecker();
 
-    var slider = document.querySelector('.swiper-container')
+    // var slider = document.querySelector('.swiper-container')
 
-    slider.addEventListener('mouseenter', function(){
-        mySwiper.autoplay.stop();
-    })
+    // slider.addEventListener('mouseenter', function(){
+    //     mySwiper.autoplay.stop();
+    // })
 
-    slider.addEventListener('mouseleave', function(){
-        mySwiper.autoplay.start();
-    })
-
-    @@include('../components/popup/popup.js')
-    @@include('../components/popup/form.js')
+    // slider.addEventListener('mouseleave', function(){
+    //     mySwiper.autoplay.start();
+    // })
 
 });
 

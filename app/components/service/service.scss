@@ -1,0 +1,42 @@
+.service{
+    margin-top: 78px;
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item{
+        width: 25%;
+        padding-right: 30px;
+
+        &:not(:first-child){
+            border-left: 1px solid rgba(89, 136, 20, 0.3);
+            padding-left: 30px;
+        }
+
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+
+    &__pic{
+        margin-left: 35px;
+    }
+
+    &__name{
+        display: block;
+        margin-top: 27px;
+        margin-bottom: 18px;
+        font-weight: 700;
+        font-size: 23px;
+    }
+
+    &__text{
+        display: block;
+        font-size: 18px;
+        line-height: 28px;
+        color: #958D8A;
+    }
+}
+   
