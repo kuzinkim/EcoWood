@@ -21,6 +21,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     -webkit-overflow-scrolling: touch;
     -webkit-tap-highlight-color: transparent;
+    transition: transform .45s ease;
     &.is-hidden{
         overflow: hidden;
     }
@@ -84,6 +85,10 @@ img{
     }
 }
 
+.body--opened{
+    transform: translateX(360px);
+}
+
 textarea{
     resize: none;
 }
@@ -96,7 +101,7 @@ textarea{
     margin: 0 auto;
 }
 
-video{
-    pointer-events: none;
+.arrow-icon{
+    fill: #fff;
 }
 

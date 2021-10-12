@@ -111,27 +111,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
     tab();
 
     // Фксирование шапки и отображение кнопки навверх
-    // var buttonUp = document.querySelector('.button-up')
+    var buttonUp = document.querySelector('.button-up')
 
-    // window.addEventListener('scroll', function(e){
-    //     var pageScrollTop = window.pageYOffset;
-    //     var header = document.querySelector('.header');
-    //     var headerHeight = header.clientHeight + 40;
+    window.addEventListener('scroll', function(e){
+        var pageScrollTop = window.pageYOffset;
+        var header = document.querySelector('.header');
+        var headerHeight = header.clientHeight + 40;
 
-    //     if(pageScrollTop >= headerHeight){
-    //         header.classList.add('is-fixed');
-    //     }else{
-    //         header.classList.remove('is-fixed');
-    //     }
+        if(pageScrollTop >= headerHeight){
+            header.classList.add('is-fixed');
+        }else{
+            header.classList.remove('is-fixed');
+        }
 
-    //     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
-    //     if (scrolled > 700) {
-    //         buttonUp.classList.add('is-show');
-    //     } else {
-    //         buttonUp.classList.remove('is-show');
-    //     }
-    // })
+        if (scrolled > 700) {
+            buttonUp.classList.add('is-show');
+        } else {
+            buttonUp.classList.remove('is-show');
+        }
+    })
 
     // Показать больше продуктов
 
@@ -161,30 +161,41 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
 
     // Мобильное меню
+    var body = document.querySelector('body');
     var burger = document.querySelector('.js-burg');
     var headerMenu = document.querySelector('.header__nav');
     var wrapper = document.querySelector('.wrapper');
     var headerMenuLink = document.querySelectorAll('.header__nav-link');
+    var closeMenuBtn = document.querySelector('.js-close-menu')
+    var closeCatalogBtn = document.querySelector('.js-close-catalog')
+    var catalog = document.querySelector('.catalog__dropdown')
+    var catalogBtn = document.querySelector('.catalog__btn')
 
 
     burger.addEventListener('click', function(){
 
-        var header = document.querySelector('.header__inner')
-
         if(!this.classList.contains('active')){
-            this.classList.add('active');
-            header.classList.add('is-color');
             headerMenu.classList.add('is-active');
-            body.classList.add('is-hidden');
-            wrapper.classList.add('overlay');
+            body.classList.add('body--opened');
+            wrapper.classList.add('overlay')
             
         }else{
-            this.classList.remove('active');
-            header.classList.remove('is-color');
             headerMenu.classList.remove('is-active');
-            body.classList.remove('is-hidden');
-            wrapper.classList.remove('overlay');
+            body.classList.remove('body--opened');
+            wrapper.classList.remove('overlay')
         }
+    })
+
+    closeMenuBtn.addEventListener('click', function(){
+        body.classList.remove('is-hidden');
+        body.classList.remove('body--opened');
+        wrapper.classList.remove('overlay');
+        headerMenu.classList.remove('is-active');
+    })
+
+    closeCatalogBtn.addEventListener('click', function(){
+        catalog.classList.remove('active');
+        catalogBtn.classList.remove('active');
     })
 
     for(var i = 0; i < headerMenuLink.length; i++){
@@ -222,54 +233,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     }
 
-
-    // const breakpoint = window.matchMedia( '(max-width:767px)' );
-
-    // let mySwiper;
-
-    // const breakpointChecker = function() {
-
-    //     if ( breakpoint.matches === true ) {
-
-    //     if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
-
-    //     return;
-
-    //     } else if ( breakpoint.matches === false ) {
-    //         return enableSwiper();
-    //     }
-
-    // };
-
-    // const enableSwiper = function() {
-
-    //     mySwiper = new Swiper ('.swiper-container', {
-    //         navigation: {
-    //           nextEl: '.project-button--next',
-    //           prevEl: '.project-button--prev',
-    //         },
-    //         autoplay: {
-    //             delay: 5000,
-    //             disableOnInteraction: true,
-    //         },
-    //         simulateTouch: false
-    //     });
-    // };
-
-    // breakpoint.addListener(breakpointChecker);
-
-    // breakpointChecker();
-
-    // var slider = document.querySelector('.swiper-container')
-
-    // slider.addEventListener('mouseenter', function(){
-    //     mySwiper.autoplay.stop();
-    // })
-
-    // slider.addEventListener('mouseleave', function(){
-    //     mySwiper.autoplay.start();
-    // })
-
 });
 
 @@include('vendor/polyfill.js')
@@ -303,4 +266,19 @@ $(document).ready(function(){
         catalogEl = catalogItem[i];
         moveElement(catalogEl);
     }
+
+    
+
+    function moveCatalogOnMenu () {
+        var catalog = $('.catalog')
+        var headerNav = $('.header__nav')
+        var headerMenuMobile = $('.header__menu')
+
+        if(window.matchMedia('(max-width: 768px)').matches){
+            headerNav.prepend(catalog)
+        }
+    }
+
+    moveCatalogOnMenu();
+    
 })
