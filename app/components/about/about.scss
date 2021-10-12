@@ -2,6 +2,10 @@
     position: relative;
     padding: 65px 0 350px 0;
 
+    @include media-breakpoint-down(tablet) {
+        padding: 65px 0 50px 0;
+    }
+
     &__inner{
         padding-bottom: 64px;
 
@@ -16,6 +20,11 @@
         line-height: 28px;
         display: block;
         max-width: 791px;
+        text-align: left;
+
+        @include media-breakpoint-down(mobile) {
+            text-align: center;
+        }
     }
 
     &__title{
@@ -25,41 +34,82 @@
         display: block;
         margin-top: 41px;
         margin-bottom: 36px;
+        text-align: left;
+
+        @include media-breakpoint-down(mobile) {
+            text-align: center;
+        }
     }
 
     &__wrapper{
         display: flex;
         margin-top: 30px;
 
-        @include media-breakpoint-down(tablet) {
-            display: block;
+        &-inner{
+            max-height: 4000px;
+            -webkit-transition: all .4s ease;
+            -o-transition: all .4s ease;
+            transition: all .4s ease;
+            overflow: hidden;
         }
 
-        @include media-breakpoint-down(mobile) {
-            &-list{
-                &.is-hidden{
-                    .product__list{
-                        max-height: 320px;
-                        position: relative;
-                        overflow: hidden;
-                        &::after{
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            right: 0;
-                            height: 100px;
-                            background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255, 255, 255, 0)));
-                            background: -o-linear-gradient(bottom, #fff, rgba(255, 255, 255, 0));
-                            background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0));
-                            opacity: 1;
-                            transition: opacity .4s ease;
-                        }
-                    }   
+        &-list{
+
+            &.is-hidden{
+                .about__wrapper-inner{
+                    max-height: 480px;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100px;
+                        background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0));
+                        opacity: 1;
+                        transition: opacity .4s ease;
+                    }
                 }
             }
         }
+
+        @include media-breakpoint-down(tablet) {
+            display: block;
+
+            &-list{
+                text-align: center;
+            }
+        }
+
+        // @include media-breakpoint-down(mobile) {
+        //     &-list{
+        //         &.is-hidden{
+        //             .product__list{
+        //                 max-height: 320px;
+        //                 position: relative;
+        //                 overflow: hidden;
+        //                 &::after{
+        //                     content: '';
+        //                     display: block;
+        //                     position: absolute;
+        //                     bottom: 0;
+        //                     left: 0;
+        //                     right: 0;
+        //                     height: 100px;
+        //                     background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255, 255, 255, 0)));
+        //                     background: -o-linear-gradient(bottom, #fff, rgba(255, 255, 255, 0));
+        //                     background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0));
+        //                     opacity: 1;
+        //                     transition: opacity .4s ease;
+        //                 }
+        //             }   
+        //         }
+        //     }
+        // }
     }
 
     &__list{
@@ -70,10 +120,6 @@
             padding-right: 0;
         }
 
-        @include media-breakpoint-down(mobile) {
-            max-height: 1700px;
-            transition: all 0.4s ease;
-        }
         &-item{
             font-size: 16px;
             font-weight: 500;
@@ -107,6 +153,18 @@
     }
     &__pic{
         flex-shrink: 0;
+        padding-left: 30px;
+
+        @include media-breakpoint-down(tablet) {
+            margin-top: 60px;
+            padding-left: 0;
+        }
+
+        img{
+            @include media-breakpoint-down(tablet) {
+                margin: auto;
+            }
+        }
     }
 
     &__btn{

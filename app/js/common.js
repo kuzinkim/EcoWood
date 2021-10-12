@@ -273,3 +273,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 @@include('vendor/polyfill.js')
+
+$(document).ready(function(){
+    
+    $('.footer__catalog-btn').on('click', function(){
+        $(this).toggleClass('active')
+        $('.footer__catalog-dropdown').stop().slideToggle()
+    })
+
+    $('.catalog__btn').on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('active')
+        $('.catalog__dropdown').toggleClass('active')
+    })
+
+    var catalogItem = document.querySelectorAll('.js-catalog-item');
+    var catalogContainer = document.querySelector('.js-catalog-container');
+
+
+    var moveElement = function (item) {
+        if(catalogContainer){
+            var clonedElement = item.cloneNode(true);
+            catalogContainer.append(clonedElement);
+        }
+    };
+    
+
+    for(var i = 0; i < catalogItem.length; i++){
+        catalogEl = catalogItem[i];
+        moveElement(catalogEl);
+    }
+})
