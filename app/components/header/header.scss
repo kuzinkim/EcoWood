@@ -75,6 +75,10 @@
                 font-size: 14px;
             }
 
+            @media screen and (max-width: 430px){
+                display: none;
+            }
+
             &::before{
                 content: '';
                 position: absolute;
@@ -112,6 +116,10 @@
                 font-size: 14px;
             }
 
+            @media screen and (max-width: 430px){
+                display: none;
+            }
+
             a:first-child{
 
                 &::after{
@@ -138,6 +146,19 @@
                 width: 24px;
                 height: 24px;
                 background-size: contain;
+            }
+        }
+
+        &--mobile{
+            display: none;
+
+            @media screen and (max-width: 430px){
+                display: block;
+                margin: 0 13px;
+
+                &.mail{
+                    margin-right: 2px;
+                }
             }
         }
     }
@@ -239,6 +260,12 @@
         @media screen and (max-width: 767px){
             margin-right: 54px;
             margin-left: 20px;
+        }
+
+        @media screen and (max-width: 430px){
+            display: flex;
+            align-items: center;    
+            margin-right: 38px;
         }
 
         &-input{
@@ -585,5 +612,9 @@
 
     &__field{
         position: relative;
+    }
+
+    @media screen and (max-width: 430px){
+        flex: 1
     }
 }
