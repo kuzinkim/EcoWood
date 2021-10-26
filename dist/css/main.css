@@ -616,8 +616,7 @@ textarea {
   font-size: 28px;
   color: #26130D;
   margin: 0;
-  margin-bottom: 36px;
-  line-height: 28px; }
+  margin-bottom: 36px; }
 
 .detail__description p {
   margin-bottom: 10px;
@@ -2737,7 +2736,6 @@ textarea {
 .detail-slider__title {
   font-weight: 600;
   font-size: 45px;
-  line-height: 28px;
   color: #26130D;
   margin-bottom: 51px; }
 
@@ -2746,20 +2744,67 @@ textarea {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 1200px) {
+    .detail-slider__inner {
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
+  @media screen and (max-width: 767px) {
+    .detail-slider__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .detail-slider__column {
   width: 33%; }
+  @media screen and (max-width: 1200px) {
+    .detail-slider__column {
+      width: 50%; } }
+  @media screen and (max-width: 767px) {
+    .detail-slider__column {
+      width: 100%; } }
+  @media screen and (max-width: 1200px) {
+    .detail-slider__column--slider {
+      margin-right: 30px; } }
   .detail-slider__column--spec {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    padding-left: 70px; }
+    padding-left: 70px;
+    padding-right: 30px; }
+    @media screen and (max-width: 1300px) {
+      .detail-slider__column--spec {
+        padding-left: 30px; } }
+    @media screen and (max-width: 1200px) {
+      .detail-slider__column--spec {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1;
+        width: 100%;
+        -webkit-box-flex: 1;
+        -webkit-flex: auto;
+            -ms-flex: auto;
+                flex: auto;
+        margin-top: 40px;
+        padding: 0; } }
   .detail-slider__column--order {
     max-width: 315px;
     background: #EEF6ED;
     border-radius: 10px;
-    padding: 27px 20px 21px 20px; }
+    padding: 27px 20px 21px 20px;
+    height: 100%; }
+    @media screen and (max-width: 1200px) {
+      .detail-slider__column--order {
+        max-width: 100%;
+        width: calc(50% - 30px); } }
+    @media screen and (max-width: 767px) {
+      .detail-slider__column--order {
+        width: 100%;
+        margin-top: 40px; } }
 
 .detail-slider-top a {
   display: block;
@@ -2885,36 +2930,6 @@ textarea {
   .detail-slider-thumbs .swiper-slide {
     height: 57px; } }
 
-@media screen and (max-width: 999px) {
-  .detail-slider__inner {
-    display: block; }
-  .detail-slider__column {
-    width: 570px;
-    max-width: 100%;
-    margin: auto; }
-  .detail-slider__column--flex {
-    width: 100%;
-    margin-top: 60px; }
-  .detail-slider__arrow {
-    width: 70px;
-    height: 70px; }
-  .detail-slider-thumbs .swiper-slide img,
-  .detail-slider-thumbs .swiper-slide {
-    height: 70px; }
-  .detail-slider-wrapper {
-    padding-right: 100px;
-    padding-left: 100px; }
-  .detail__buttons {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-top: 30px; }
-  .detail__buttons .btn {
-    margin-right: 30px; }
-  .detail__buttons .btn--border {
-    margin-right: 0; } }
-
 @media screen and (max-width: 559px) {
   .detail-slider-thumbs .swiper-slide img, .detail-slider-thumbs .swiper-slide {
     height: 54px; }
@@ -2979,6 +2994,9 @@ textarea {
 
 .detail-order-bottom {
   margin-top: 22px; }
+  @media screen and (max-width: 1200px) {
+    .detail-order-bottom {
+      text-align: center; } }
   .detail-order-bottom__text {
     font-weight: 500;
     font-size: 16px;
@@ -2992,6 +3010,9 @@ textarea {
     padding: 16px 29px;
     display: block;
     margin-bottom: 11px; }
+    @media screen and (max-width: 1200px) {
+      .detail-order-bottom .main__button {
+        margin: 0 auto 11px; } }
 
 .detail-tabs {
   margin-top: 60px;
