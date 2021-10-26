@@ -1,1 +1,1 @@
-@@include('vendor/smoothScroll.js')
+@@include('../../node_modules/swiper/js/swiper.js')
