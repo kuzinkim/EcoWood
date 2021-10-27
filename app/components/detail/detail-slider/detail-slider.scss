@@ -5,6 +5,10 @@
         font-size: 45px;
         color: #26130D;
         margin-bottom: 51px;
+
+        @media screen and (max-width: 550px){
+            font-size: 26px;
+        }
     }
 
     &__inner{
@@ -148,13 +152,21 @@
         &--next{
             right: 11px;
             bottom: 0;
-            top: 0
+            top: 0;
+
+            @media screen and (max-width: 767px){
+                right: -17px;
+            }
         }
 
         &--prev{
             left: 11px;
             bottom: 0;
             top: 0;
+
+            @media screen and (max-width: 767px){
+                left: -17px;
+            }
 
             .arrow-icon{
                 transform: translate(-50%, -50%) rotate(180deg);

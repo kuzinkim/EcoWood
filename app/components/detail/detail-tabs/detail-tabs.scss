@@ -30,12 +30,21 @@
         text-align: center;
         padding: 14px 0;
 
+        @media screen and (max-width: 999px){
+            font-size: 14px;
+        }
+
         &:hover{
             color: #107C03;
         }
 
         &:not(:last-child){
             border-right: 1px solid rgba(89, 136, 20, 0.3);
+
+            @media screen and (max-width: 767px){
+                border-right: 0;
+                border-bottom: 1px solid rgba(89, 136, 20, 0.3);
+            }
         }
 
         &_active{
@@ -167,11 +176,6 @@
 
     .detail-tabs__button{
         width: 100%;
-    }
-
-    .detail-tabs__button:not(:first-child) {
-        border-left: 1px solid #E0E0E0;
-        border-top: none;
     }
 
     .detail__description ul{

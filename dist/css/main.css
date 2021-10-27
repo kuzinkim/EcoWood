@@ -2738,6 +2738,9 @@ textarea {
   font-size: 45px;
   color: #26130D;
   margin-bottom: 51px; }
+  @media screen and (max-width: 550px) {
+    .detail-slider__title {
+      font-size: 26px; } }
 
 .detail-slider__inner {
   display: -webkit-box;
@@ -2870,10 +2873,16 @@ textarea {
     right: 11px;
     bottom: 0;
     top: 0; }
+    @media screen and (max-width: 767px) {
+      .detail-slider__arrow--next {
+        right: -17px; } }
   .detail-slider__arrow--prev {
     left: 11px;
     bottom: 0;
     top: 0; }
+    @media screen and (max-width: 767px) {
+      .detail-slider__arrow--prev {
+        left: -17px; } }
     .detail-slider__arrow--prev .arrow-icon {
       -webkit-transform: translate(-50%, -50%) rotate(180deg);
           -ms-transform: translate(-50%, -50%) rotate(180deg);
@@ -3053,10 +3062,17 @@ textarea {
     cursor: pointer;
     text-align: center;
     padding: 14px 0; }
+    @media screen and (max-width: 999px) {
+      .detail-tabs__button {
+        font-size: 14px; } }
     .detail-tabs__button:hover {
       color: #107C03; }
     .detail-tabs__button:not(:last-child) {
       border-right: 1px solid rgba(89, 136, 20, 0.3); }
+      @media screen and (max-width: 767px) {
+        .detail-tabs__button:not(:last-child) {
+          border-right: 0;
+          border-bottom: 1px solid rgba(89, 136, 20, 0.3); } }
     .detail-tabs__button_active {
       color: #107C03;
       font-weight: 700;
@@ -3156,9 +3172,6 @@ textarea {
     display: block; }
   .detail-tabs__button {
     width: 100%; }
-  .detail-tabs__button:not(:first-child) {
-    border-left: 1px solid #E0E0E0;
-    border-top: none; }
   .detail__description ul {
     padding-left: 24px; } }
 
