@@ -22,6 +22,7 @@ function _nonIterableSpread() {
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
+    initSmoothScrolling();
     // Разворот текста
     var bindExpandService = function (block) {
         var button = block.querySelector('.js-more-btn');
@@ -314,6 +315,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             tabContents[k].classList.add('detail-tabs__tab_active');
         }
     }
+
+    @@include('vendor/smoothScroll.js')
+    @@include('../components/popup/popup.js')
+    
 });
 
 function initCompareTable(items, spcifications) {
